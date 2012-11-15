@@ -189,9 +189,9 @@
     </style>
   </head>
   <body>  
-    <div class="mask">
+    <!-- <div class="mask">
       <div>This feature is disabled. Please download this plugin and install it in your machine for full features</div>
-    </div>  
+    </div> -->  
     <div>      
       <div class="toolBotton">           
         <a id="Savebtn" class="imgbtn" href="javascript:void(0);">                
@@ -239,13 +239,11 @@
             </div>                
           </label>                 
           <label>                    
-            <span>                        Location:
-            </span>                    
+            <span>Location:</span>                    
             <input MaxLength="200" id="Location" name="Location" style="width:95%;" type="text" value="<?php echo $event?$event->Location:""; ?>" />                 
           </label>                 
           <label>                    
-            <span>                        Remark:
-            </span>                    
+            <span>Remark:</span>                    
 <textarea cols="20" id="Description" name="Description" rows="2" style="width:95%; height:70px">
 <?php echo $event?$event->Description:""; ?>
 </textarea>                

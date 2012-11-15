@@ -1,10 +1,14 @@
 .calmain
 {
-border-bottom:2px solid #c3d9ff;
-	background:#c3d9ff
+border-bottom:2px solid #FFF;
+	background:#FFF;
 }
 .printborder {
-	border-left:9px solid #c3d9ff
+	padding-left:9px;
+	padding-right: 9px; 
+	border-left:1px solid #CCC;
+	border-right:1px solid #CCC;
+	margin-left:1px; 
 }
 
 .scolltimeevent
@@ -23,22 +27,22 @@ border-bottom:2px solid #c3d9ff;
 {
 	table-layout:fixed;
 	width:100%;
-	background-color:#c3d9ff;
+	background-color:#FFF;
 	overflow:hidden;
 	font-size:12px;
 	line-height:14px
  }
 #gridcontainer {
 	height:300px;
-	background:#c3d9ff;
+	background:#FFF;
 	position:relative;
 	-webkit-user-select:none;
 	-khtml-user-select:none;
 }
 .wk-dayname {
 	font-weight:normal;
-	color:#112abb;
-	padding:2px 4px;
+	color:#000;
+	padding:10px 4px;
 	margin-left:4px;
 	white-space:nowrap
 }
@@ -54,7 +58,7 @@ border-bottom:2px solid #c3d9ff;
 }
 .wk-dummyth {
 	vertical-align:top;
-	background-color:#c3d9ff;
+	background-color:#FFF;
 	padding:0
 }
 .wk-daylink
@@ -108,8 +112,8 @@ border-bottom:2px solid #c3d9ff;
 	overflow:hidden
 }
 .chromeColor {
-	background:#c3d9ff;
-	border-color:#c3d9ff
+	background:#FFF;
+	border-color:#FFF;
 }
 .tg-timedevents {
 	background-color:#fff;
@@ -357,20 +361,23 @@ border-bottom:2px solid #c3d9ff;
 	background-color:transparent
 }
 .st-contents, .mv-container {
-	font-size:11px;
+	font-size:12px;
 	line-height:14px
 }
 .mv-daynames-table {
 	position:absolute;
 	table-layout:fixed;
-	top:0;
+	top:10px;
 	left:0;
 	width:100%;
-	background:#c3d9ff;
-	color:#112abb
+	background:#fff;
+	color:#000;
+	/*padding: 10px;
+	height: 20px!important;
+	display: block;*/
 }
 .mv-dayname {
-	font-weight:normal
+	font-weight:normal;
 }
 
 .mv-event-container {
@@ -378,7 +385,7 @@ border-bottom:2px solid #c3d9ff;
 	position:absolute;
 	left:0;
 	width:100%;
-	top:14px;
+	top:35px;
 	bottom:0;
 	background:white;
 }
@@ -401,7 +408,7 @@ border-bottom:2px solid #c3d9ff;
 	table-layout:fixed
 }
 .st-bg {
-	border-left:1px solid #c3d9ff
+	border-left:1px solid #e6e6e6;
 }
 .st-bg-today {
 	background-color:#ffc
@@ -412,8 +419,8 @@ border-bottom:2px solid #c3d9ff;
 	opacity:0.8;
 }
 .st-dtitle {
-	border-left:1px solid #c3d9ff;
-	border-top:1px solid #c3d9ff;
+	border-left:1px solid #FFF;
+	border-top:1px solid #FFF;
 	background-color:#e8eef7;
 	color:#444;
 	padding-right:2px;
@@ -594,7 +601,7 @@ border-bottom:2px solid #c3d9ff;
 {
     width: 100%;    
     vertical-align: bottom;
-    border-color:#c3d9ff;
+    border-color:#FFF;
 }
 .view-tab {
 	PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; VERTICAL-ALIGN: bottom; CURSOR: pointer; PADDING-TOP: 0px
@@ -603,7 +610,7 @@ border-bottom:2px solid #c3d9ff;
 	BACKGROUND-COLOR: #e8eef7
 }
 .view-tab-selected {
-	BACKGROUND-COLOR: #c3d9ff
+	BACKGROUND-COLOR: #FFF;
 }
 .tab-name {
 	PADDING-BOTTOM: 3px; 
@@ -638,7 +645,7 @@ border-bottom:2px solid #c3d9ff;
 	POSITION: absolute; 
 	FILTER: alpha(opacity=50); 
 	LINE-HEIGHT: 0; 
-	BACKGROUND-COLOR: #c3d9ff; 
+	BACKGROUND-COLOR: #FFF; 
 	FONT-SIZE: 0px; 
 	opacity: 0.5; 
 	-khtml-opacity: 0.5
