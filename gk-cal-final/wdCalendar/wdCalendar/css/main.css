@@ -582,9 +582,6 @@ div.ViewgBlock>div.loading
     filter: alpha(opacity=50);
     background:#f4f4f4 url('images/calendar/indicator_web20_working.gif') no-repeat center center;  
 }
-
-
-
 .transparent
 {
 	filter:alpha(opacity=0);
