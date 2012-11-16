@@ -1,0 +1,613 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   
+   <title>Gest Kontrol</title> 
+
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+   <link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" /> 
+   <link rel="stylesheet" type="text/css" href="css/jquery.mobile.simpledialog.min.css" /> 
+   <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+   <link rel="stylesheet" href="css/estilos.css" />
+
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/jquery.mobile-1.1.0.min.js"></script>
+
+   <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>      
+   <script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
+   <script type="text/javascript" src="js/datepicker-espanol.js"></script>
+   <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.flipbox.min.js"></script>
+   </head> 
+
+<body> 
+<div data-role="page" id="editar-visitas">
+
+<div data-role="header" data-position="inline" data-theme="b">
+	<a href="index.html" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Volver</a>
+	<h1>Gest Kontrol &#174;</h1>
+	<a href="index.html" data-icon="delete" rel="external">Salir</a>
+</div><!-- /header -->
+
+<div data-role="content">	
+<h3 style="text-align:center">Inicio » Editar Visitas </h3>
+<hr>
+<div class="margen-inferior">
+<div data-role="navbar" data-iconpos="top">
+	<ul>
+		<li><a href="#" class="ui-btn-active">Hoy</a></li>
+		<li><a href="#">Semanal</a></li>
+     	<li><a href="#">Mensual</a></li>
+        <li><a href="#">Sin Agendar</a></li>
+	</ul>
+</div><!-- /navbar -->
+</div>
+
+<div>
+<ul data-role="listview" data-inset="true" data-filter="true" data-dividertheme="d" data-count-theme="b" data-split-icon="gear" data-split-theme="d">
+	
+<li data-role="list-divider">A</li>
+
+<li>
+<h3 class="ui-li-heading">Acuña Moraga Miguel</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-role="button" data-rel="dialog">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-role="button" data-rel="dialog">Eliminar</a>
+<a href="#popup-editar-cliente-piso" data-role="button" data-rel="dialog">Editar Cliente Piso</a>
+</div> 
+</li>
+
+<li>
+<h3 class="ui-li-heading">Acuña Moraga Miguel</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-rel="dialog" data-role="button">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-rel="dialog" data-role="button">Eliminar</a>
+</div> 
+</li>
+
+
+<li>
+<h3 class="ui-li-heading">Acuña Moraga Miguel</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-rel="dialog" data-role="button">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-rel="dialog" data-role="button">Eliminar</a>
+</div> 
+</li>
+
+
+<li>
+<h3 class="ui-li-heading">Acuña Moraga Miguel</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-rel="dialog" data-role="button">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-rel="dialog" data-role="button">Eliminar</a>
+</div> 
+</li>
+
+<li data-role="list-divider">B</li>
+
+<li>
+<h3 class="ui-li-heading">Berríos Javier</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-rel="dialog" data-role="button">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-rel="dialog" data-role="button">Eliminar</a>
+</div> 
+</li>
+
+<li>
+<h3 class="ui-li-heading">Berríos Javier</h3>
+<p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p>
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" data-inline="true">
+<a href="#editar-perfil" data-role="button" data-rel="dialog">Editar Perfil</a>
+<a href="#popup-agendar-visita" data-rel="dialog" data-role="button">Reservar / Editar Visita</a>
+<a href="#popup-eliminar-visita" data-rel="dialog" data-role="button">Eliminar</a>
+</div> 
+</li>
+
+</ul>
+</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!--------------------------------------------------- Pop Up EDITAR PERFIL -------------------------------------------------->
+<div data-role="page" id="editar-perfil">
+<div data-role="header" data-theme="b"><h1>Editar Perfil</h1></div>
+	<div data-role="content">	
+<h3 style="text-align:center">Perico Lo Palotes</h3>
+
+<h3>Datos Personales</h3>
+
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Nombre Visita:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Apellido Visita:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> RUT:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+	
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Pasaporte:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+<div data-role="fieldcontain">
+    <label for="name">Subir Fotografía:</label>
+    <button type="submit" class="ui-btn-hidden" aria-disabled="false" data-inline="true" data-mini="true">Examinar</button>
+</div>
+<div data-role="fieldcontain">
+    <label for="name">Correo electrónico:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+<hr>
+<fieldset class="ui-grid-a">
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="editar-visitas.html" data-role="button" data-theme="c" data-inline="true">Volver</a>
+</fieldset>
+</div><!-- /content -->
+</div><!-- /page -->
+
+<!--------------------------------------------------- Pop Up AGENDAR VISITA ------------------------------------------------->
+<div data-role="page" id="popup-agendar-visita">
+<div data-role="header" data-theme="b"><h1>Agendar Visita</h1></div>
+	<div data-role="content">
+
+<div class="radio-prueba">    
+<fieldset data-role="controlgroup" data-type="horizontal" data-ajax="true" class="row-b">
+     	<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1"/>
+     	<label for="radio-choice-1">Peatonal</label>
+     	<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" checked="checked"/>
+     	<label for="radio-choice-2">Automóvil</label>
+</fieldset>
+</div> 
+
+
+<!--<div data-role="navbar" data-iconpos="top">
+	<ul>
+		<li><a href="#" class="ui-btn-active">Peatón</a></li>
+		<li><a href="#popup-agendar-visita-auto" data-rel="dialog">Automóvil</a></li>
+	</ul>
+</div> /navbar -->
+
+
+<h3 style="text-align:center">Perico Lo Palotes</h3>
+
+<div data-role="collapsible" data-content-theme="b" data-theme="b" data-collapsed="false">
+<h3>Agendar Visita</h3>
+
+<div data-role="collapsible-set">
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Visita Frecuente</h3>
+
+<h3>Entrada</h3>
+
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+	   <legend><strong class="red">*</strong> Aplicar los dias:</legend>
+	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+	   <label for="checkbox-1">Lun</label>
+       <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+	   <label for="checkbox-2">Mar</label>
+       <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+	   <label for="checkbox-3">Mie</label>
+       <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+	   <label for="checkbox-4">Jue</label>
+       <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+	   <label for="checkbox-5">Vie</label>
+       <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+	   <label for="checkbox-6">Sab</label>
+       <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+	   <label for="checkbox-7">Dom</label>
+    </fieldset>
+</div>
+
+<div data-role="fieldcontain">
+<label for="mydate"><strong class="red">*</strong> Hora Estimada de Ingreso:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+
+<div data-role="fieldcontain">
+<label for="select-choice-a" class="select ui-select">Piso:</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Seleccione...</option>
+<option value="standard">Ninguno</option>
+<option value="standard" selected="selected">Piso 1</option>
+<option value="rush">Piso 2</option>
+<option value="express">Piso 3</option>
+<option value="overnight">Piso 4</option>
+</select>
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Oficina:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+
+<h3>Salida</h3>
+
+<div data-role="fieldcontain">
+<label for="mydate">Hora Salida:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="editar-visitas.html" data-role="button" data-theme="c" data-inline="true">Volver</a>
+</div>
+
+
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Sólo una vez</h3>
+
+<h3>Entrada</h3>
+ <div data-role="fieldcontain">   
+<label for="mydate"><strong class="red">*</strong> Fecha</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox"}'>
+ </div>
+ 
+<div data-role="fieldcontain">
+<label for="mydate"><strong class="red">*</strong> Hora Estimada de Ingreso:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+
+<h3>Salida</h3>
+<div data-role="fieldcontain">
+<label for="mydate">Hora:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="editar-visitas.html" data-role="button" data-theme="c" data-inline="true">Volver</a>
+</div>
+</div>
+
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!--------------------------------------------------- Pop Up AGENDAR VISITA AUTO -------------------------------------------------->
+<div data-role="page" id="popup-agendar-visita-auto">
+<div data-role="header" data-theme="b"><h1>Resevar Visita</h1></div>
+	<div data-role="content">	
+<div data-role="navbar" data-iconpos="top">
+	<ul>
+		<li><a href="#popup-agendar-visita">Peatón</a></li>
+		<li><a href="#" class="ui-btn-active">Automóvil</a></li>
+	</ul>
+</div><!-- /navbar -->
+
+<h3 style="text-align:center">Perico Los Palotes</h3>
+
+<div data-role="collapsible" data-content-theme="b" data-theme="b" data-collapsed="false">
+<h3>Agendar Visita</h3>
+
+<div data-role="collapsible-set">
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Visita Frecuente</h3>
+
+<h3>Entrada</h3>
+
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+	   <legend><strong class="red">*</strong> Aplicar los dias:</legend>
+	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+	   <label for="checkbox-1">Lun</label>
+       <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+	   <label for="checkbox-2">Mar</label>
+       <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+	   <label for="checkbox-3">Mie</label>
+       <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+	   <label for="checkbox-4">Jue</label>
+       <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+	   <label for="checkbox-5">Vie</label>
+       <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+	   <label for="checkbox-6">Sab</label>
+       <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+	   <label for="checkbox-7">Dom</label>
+    </fieldset>
+</div>
+
+<div data-role="fieldcontain">
+<label for="mydate"><strong class="red">*</strong> Hora Estimada de Ingreso:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+
+<div data-role="fieldcontain">
+<label for="select-choice-a" class="select ui-select">Piso:</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Seleccione...</option>
+<option value="standard">Ninguno</option>
+<option value="standard">Piso 1</option>
+<option value="rush">Piso 2</option>
+<option value="express">Piso 3</option>
+<option value="overnight">Piso 4</option>
+</select>
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Oficina:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Patente Automóvil:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+    
+<div data-role="fieldcontain">
+<label for="select-choice-a" class="select ui-select"><strong class="red">*</strong> Estacionamiento:</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Sectores Habilitados:</option>
+<option value="standard">Sector A1</option>
+<option value="rush">Sector A2</option>
+<option value="express">Sector A3</option>
+<option value="overnight">Sector A4</option>
+</select>
+</div>
+<h3>Salida</h3>
+
+<div data-role="fieldcontain">
+<label for="mydate">Hora Salida:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="editar-visitas.html" data-role="button" data-theme="c" data-inline="true">Volver</a>
+</div>
+
+
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Sólo una vez</h3>
+
+<h3>Entrada</h3>
+ <div data-role="fieldcontain">   
+<label for="mydate"><strong class="red">*</strong> Fecha</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox"}'>
+ </div>
+ 
+<div data-role="fieldcontain">
+<label for="mydate"><strong class="red">*</strong> Hora Estimada de Ingreso:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Patente Automóvil:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+    
+<div data-role="fieldcontain">
+<label for="select-choice-a" class="select ui-select"><strong class="red">*</strong> Estacionamiento:</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Sectores Habilitados:</option>
+<option value="standard">Sector A1</option>
+<option value="rush">Sector A2</option>
+<option value="express">Sector A3</option>
+<option value="overnight">Sector A4</option>
+</select>
+</div>
+
+<h3>Salida</h3>
+<div data-role="fieldcontain">
+<label for="mydate">Hora:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="editar-visitas.html" data-role="button" data-theme="c" data-inline="true">Volver</a>
+</div>
+</div>
+
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!------------------------------------------------------ Pop Up VISITA AGENDADA >> OK -------------------------------------------------->
+<div data-role="page" id="popup-agendar-ok">
+<div data-role="header" data-theme="d"><h1>Hecho!</h1></div>
+   <div data-role="content" data-theme="c">
+    <p class="centrado"><strong>Moraga, Miguel:</strong></p>
+    <p class="centrado">Visita guardada Exitosamente.</p>
+    <fieldset class="ui-grid-a">
+    <a href="editar-visitas.html" data-role="button" data-theme="c">Volver</a>
+    </fieldset>
+</div>
+</div><!-- /page -->
+
+
+<!------------------------------------------------------ Pop Up CONFIRMAR EDITAR VISITAS -------------------------------------------------->
+<div data-role="page" id="popup-eliminar-visita">
+<div data-role="header" data-theme="a"><h1>¿Está seguro?</h1></div>
+   <div data-role="content">
+    <a href="#popup-eliminar-visita-ok" data-rel="dialog" data-role="button" data-icon="delete" data-theme="b">Eliminar Definitivamente</a>
+    <a href="editar-visitas.html" data-role="button" data-theme="d" data-icon="back">Volver</a>
+</div>
+</div><!-- /page -->
+
+
+<!------------------------------------------------------ Pop Up ELIMINAR VISITAS >> OK -------------------------------------------------->
+<div data-role="page" id="popup-eliminar-visita-ok">
+<div data-role="header" data-theme="d"><h1>Hecho!</h1></div>
+   <div data-role="content" data-theme="c">
+    <p class="centrado"><strong>Moraga, Miguel:</strong></p>
+    <p class="centrado">Usuario eliminado definitivamente.</p>
+    <fieldset class="ui-grid-a">
+    <a href="editar-visitas.html" data-role="button" data-theme="c">Volver</a>
+    </fieldset>
+</div>
+</div><!-- /page -->
+
+
+<!--------------------------------------------------- Pop Up CLIENTE EDITAR PISOS -------------------------------------------------->
+<div data-role="page" id="popup-editar-cliente-piso">
+<div data-role="header" data-theme="b"><h1>Editar Clientes</h1></div>
+	<div data-role="content">	
+
+<h3 style="text-align:center">Cliente: Los Palotes: Edición de Pisos y Oficinas</h3>
+
+
+<div data-role="collapsible-set" data-content-theme="e">
+	<div data-role="collapsible">
+	<h2>Pisos 1 - 9</h2>
+<ul data-role="listview" data-inset="true" data-theme="c">
+	<li>
+        <div data-role="fieldcontain" style="margin:0px; width:100%">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="margin:0px; width:100%">
+           <legend><h2>Piso 1:</h2></legend>
+           <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+           <label for="checkbox-2">Of. 101</label>
+           <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+           <label for="checkbox-3">Of. 102</label>
+           <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+           <label for="checkbox-4">Of. 103</label>
+           <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+           <label for="checkbox-5">Of. 104</label>
+        </fieldset>
+       	</div>
+	</li>
+	<li>
+        <div data-role="fieldcontain" style="margin:0px;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="margin:0px;">
+           <legend><h2>Piso 2:</h2></legend>
+           <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+           <label for="checkbox-6">Of. 201</label>
+           <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+           <label for="checkbox-7">Of. 202</label>
+           <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
+           <label for="checkbox-8">Of. 203</label>
+        </fieldset>
+       	</div>
+    </li>
+	<li>
+         <div data-role="fieldcontain" style="margin:0px;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="margin:0px;">
+           <legend><h2>Piso 3:</h2></legend>
+           <input type="checkbox" name="checkbox-10" id="checkbox-10" class="custom" />
+           <label for="checkbox-10">Of. 301</label>
+           <input type="checkbox" name="checkbox-11" id="checkbox-11" class="custom" />
+           <label for="checkbox-11">Of. 302</label>
+           <input type="checkbox" name="checkbox-12" id="checkbox-12" class="custom" />
+           <label for="checkbox-12">Of. 303</label>
+           <input type="checkbox" name="checkbox-13" id="checkbox-13" class="custom" />
+           <label for="checkbox-13">Of. 304</label>           
+        </fieldset>
+       	</div>
+    </li>
+	<li>
+        <div data-role="fieldcontain" style="margin:0px;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="margin:0px;">
+           <legend><h2>Piso 4:</h2></legend>
+           <input type="checkbox" name="checkbox-14" id="checkbox-14" class="custom" />
+           <label for="checkbox-14">Of. 401</label>
+           <input type="checkbox" name="checkbox-15" id="checkbox-15" class="custom" />
+           <label for="checkbox-15">Of. 402</label>
+           <input type="checkbox" name="checkbox-16" id="checkbox-16" class="custom" />
+           <label for="checkbox-16">Of. 403</label>
+           <input type="checkbox" name="checkbox-17" id="checkbox-17" class="custom" />
+           <label for="checkbox-17">Of. 404</label>           
+        </fieldset>
+       	</div>    
+    </li>
+	<li>
+        <div data-role="fieldcontain" style="margin:0px;">
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="margin:0px;">
+           <legend><h2>Piso 5:</h2></legend>
+           <input type="checkbox" name="checkbox-18" id="checkbox-18" class="custom" disabled/>
+           <label for="checkbox-18">Of. 501</label>
+           <input type="checkbox" name="checkbox-19" id="checkbox-19" class="custom" />
+           <label for="checkbox-19">Of. 502</label>
+           <input type="checkbox" name="checkbox-19" id="checkbox-20" class="custom" />
+           <label for="checkbox-20">Of. 503</label>
+           <input type="checkbox" name="checkbox-21" id="checkbox-21" class="custom" />
+           <label for="checkbox-21">Of. 504</label>           
+        </fieldset>
+       	</div>        
+    </li>
+	<li>Piso 6</li>
+	<li>Piso 7</li>
+	<li>Piso 8</li>
+	<li>Piso 9</li>        
+</ul>
+	</div>
+	
+	<div data-role="collapsible">
+	<h3>Pisos 10 - 19</h3>
+<ul data-role="listview" data-inset="true">
+	<li>Acura</li>
+	<li>Audi</li>
+	<li>BMW</li>
+</ul>
+	</div>
+    
+	<div data-role="collapsible">
+	<h3>Pisos 20 - 29</h3>
+<ul data-role="listview" data-inset="true">
+	<li>Acura</li>
+	<li>Audi</li>
+	<li>BMW</li>
+</ul>
+	</div>
+    
+	<div data-role="collapsible">
+	<h3>Pisos 30 - 39</h3>
+<ul data-role="listview" data-inset="true">
+	<li>Acura</li>
+	<li>Audi</li>
+	<li>BMW</li>
+</ul>
+	</div>
+    
+	<div data-role="collapsible">
+	<h3>Pisos 40 - 49</h3>
+<ul data-role="listview" data-inset="true">
+	<li>Acura</li>
+	<li>Audi</li>
+	<li>BMW</li>
+</ul>
+	</div>
+    
+	<div data-role="collapsible">
+	<h3>Pisos 50 - 54</h3>
+<ul data-role="listview" data-inset="true">
+	<li>Acura</li>
+	<li>Audi</li>
+	<li>BMW</li>
+</ul>
+</div>   
+
+<hr>
+<div class="ui-body ui-body-b">
+<fieldset class="ui-grid-a">
+<a href="#popup-nuevo-cliente-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>
+<a href="index.html" data-role="button" data-theme="d" data-icon="back" data-inline="true" data-direction="reverse" data-transition="slide">Volver</a>
+</fieldset>
+</div>
+
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   
+   <title>Gest Kontrol</title> 
+   
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+   <link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" /> 
+   <link rel="stylesheet" type="text/css" href="css/jquery.mobile.simpledialog.min.css" /> 
+   <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+   <link rel="stylesheet" href="css/estilos.css" />
+      
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/jquery.mobile-1.1.0.min.js"></script>
+   
+  
+   <script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
+   <script type="text/javascript" src="js/datepicker-espanol.js"></script>
+   <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.flipbox.min.js"></script>
+      
+   <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>
+   </head> 
+
+<body>
+ 
+<!------------------------------------------------------ PÁGINA VALIDAR VISITAS -------------------------------------------------->
+<div data-role="page" id="validar-visitas">
+<div data-role="header" data-position="inline" data-theme="b">
+	<a href="index.html" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Volver</a>
+	<h1>Gest Kontrol &#174;</h1>
+	<a href="login.html" data-icon="delete">Salir</a>
+</div><!-- /header -->
+
+<div data-role="content">	
+<h3>Inicio » Validar Visitas </h3>
+
+<div class="margen-inferior">
+<div data-role="controlgroup" data-type="horizontal" data-mini="true" class="botones-centrados">
+<div data-role="fieldcontain">
+ <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+	   <label for="checkbox-1">Para Hoy</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Filtrar por Piso:</option>
+<option value="standard">Todos</option>
+<option value="rush">Piso 2 </option>
+<option value="express">Piso 3</option>
+<option value="overnight">Piso 4</option>
+<option value="standard">Piso 5</option>
+<option value="rush">Piso 6</option>
+<option value="express">Piso 7</option>
+</select>
+</fieldset>
+</div>
+</div>
+</div>
+
+<div>
+<ul data-role="listview" data-inset="true" data-filter="true" data-dividertheme="d">
+	<li data-role="list-divider">A</li>
+	<li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 16381214-2</p></a></li>
+	<li data-icon="gear"><a id="opendialog-patente" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+   	<li data-role="list-divider">B</li>
+	<li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+	<li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+   	<li data-role="list-divider">C</li>
+	<li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Castillo, Nicolás</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 798315031337</p></a></li>
+	<li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Contreras Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+</ul>
+</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<!------------------------------------------------------ Pop Up VALIDAR VISITAS >> OK -------------------------------------------------->
+<div data-role="dialog" id="popup-validar-ok">
+<div data-role="header" data-theme="d"><h1>Hecho!</h1></div>
+   <div data-role="content" data-theme="c">
+    <p class="centrado"><strong>Moraga, Miguel:</strong></p>
+    <p class="centrado">Validado exitosamente.</p>
+    <a href="validar-visita.html" data-role="button" data-theme="c">Volver</a>
+</div>
+</div><!-- /page -->
+
+<!---------------------------------------------------- Pop Up VALIDAR VEHICULO PATENTE >> OK -------------------------------------------------->
+<div data-role="dialog" id="patente">
+<div data-role="header" data-theme="d"><h1>Confirmar</h1></div>
+   <div data-role="content" data-theme="c">
+<div data-role="fieldcontain">
+    <label for="name">Contacto:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+<div data-role="fieldcontain">
+    <label for="name">Contacto:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+    <p class="centrado">Validado exitosamente.</p>
+    <a href="validar-visita.html" data-role="button" data-theme="c">Volver</a>
+</div>
+</div><!-- /page -->
+
+</body>
+
+
+
+<script>
+$(document).delegate('#opendialog', 'click', function() {
+  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+  //       If you prefer, it can be a member of the current page, or an anonymous div
+  //       like shown.
+  $('<div>').simpledialog2({
+    mode: 'blank',
+    headerText: 'Confirmar',
+    headerClose: true,
+    blankContent : 
+	  "<p class='centrado'><img src='img/avatar.jpg' width='120' height='120'></p>"+
+      "<h4 class='centrado'>Moraga, Miguel</h4>"+
+      // NOTE: the use of rel="close" causes this button to close the dialog.
+      "<a data-role='button' data-rel='dialog' href='#popup-validar-ok' data-transition='pop' data-icon='check'>Validar</a>"+
+	  "<a rel='close' data-role='button' href='#' data-icon='back' data-theme='c'>Volver</a>"
+  })
+})
+</script>
+
+<script>
+$(document).delegate('#opendialog-patente', 'click', function() {
+  // NOTE: The selector can be whatever you like, so long as it is an HTML element.
+  //       If you prefer, it can be a member of the current page, or an anonymous div
+  //       like shown.
+  $('<div>').simpledialog2({
+    mode: 'blank',
+    headerText: 'Confirmar',
+    headerClose: true,
+    blankContent : 
+	  "<p class='centrado'><img src='img/avatar.jpg' width='120' height='120'></p>"+
+      "<h4 class='centrado'>Moraga, Miguel</h4>"+
+      // NOTE: the use of rel="close" causes this button to close the dialog.
+	  "<p class='centrado'>Ingrese Patente:</p>"+
+      "<input class='patente' type='text' name='name' id='name' value=''/>"+
+	  "<hr>"+
+	  "<a data-role='button' data-rel='dialog' href='#popup-validar-ok' data-transition='pop' data-icon='check'>Validar</a>"+
+	  "<a rel='close' data-role='button' href='#' data-icon='back' data-theme='c'>Volver</a>"
+  })
+})
+</script>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   
+   <title>Gest Kontrol</title> 
+   
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+     
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/jquery.mobile-1.1.0.min.js"></script>
+   
+<!-- Unicos JS/CSS para Calendario y Hora -> 
+   <script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.datebox.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" />   
+<!- Fin ->
+      
+   <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="css/jquery.mobile.simpledialog.min.css" /> 
+   <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+   <link rel="stylesheet" href="css/estilos.css" />
+   
+<style>
+#yourBtn{
+   position: relative;
+   /*top: 150px;*/
+   font-family: calibri;
+   width: 150px;
+   padding: 10px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border: 1px dashed #BBB; 
+   text-align: center;
+   background-color: #DDD;
+   cursor:pointer;
+  }
+</style>   
+</head> 
+
+<body> 
+<!- PAGINA NUEVA VISITA ->
+<div data-role="page" id="nueva-visita">
+
+ <script type="text/javascript">
+    //$(document).ready(function() {
+	//	$('input[type="file"]').textinput({theme: 'c'});
+    //});
+</script><!- fancybox -->
+
+<script type="text/javascript">
+ function getFile(){
+   document.getElementById("upfile").click();
+ }
+ function sub(obj){
+    var file = obj.value;
+    var fileName = file.split("\\");
+    document.getElementById("yourBtn").innerHTML = fileName[fileName.length-1];
+    document.myForm.submit();
+    event.preventDefault();
+  }
+</script>
+
+<div data-role="header" data-theme="b">
+	<a href="index.html" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Volver</a>
+	<h1>Gest Kontrol &#174;</h1>
+	<a href="login.html" data-icon="delete" rel="external">Salir</a>
+</div><!-- /header -->
+
+<div data-role="content">	
+
+<h3 style="text-align:center">Inicio » Nueva Visita » Peatón</h3>
+<hr>
+
+<div data-role="navbar" data-iconpos="left">
+	<ul>
+		<li><a href="#" class="ui-btn-active">Peatón</a></li>
+		<li><a href="nueva-visita-auto.html" rel="external">Automóvil</a></li>
+	</ul>
+</div><!-- /navbar -->
+
+<h4>Nueva visita</h4>
+
+
+<div data-role="collapsible" data-content-theme="c" data-theme="b" data-collapsed="false">
+<h3>Datos Personales</h3>
+<form>
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Nombre Visita:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Apellido Visita:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> RUT:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+	
+<div data-role="fieldcontain">
+    <label for="name"><strong class="red">*</strong> Pasaporte:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+
+<div data-role="fieldcontain">
+    <label for="name">Subir Fotografía:</label>
+    <input type="file" data-ajax="false">
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Subir Fotografía:</label>
+    <div id="yourBtn" style="height: 50px; width: 100px;border: 1px dashed #BBB; cursor:pointer;" onclick="getFile()">Click to upload!</div>
+    <!-- this is your file input tag, so i hide it!-->
+    <div style='height: 20px;width:300px; overflow: hidden;'>
+    <input id="upfile" type="file" value="upload"/>
+    </div>
+    <!-- here you can have file submit button or you can write a simple script to upload the file automatically <input type="submit" value='submit' >-->
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Correo electrónico:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>	
+<hr>
+
+<fieldset class="ui-grid-a">
+<a href="#popup-agendar-ok" id="enable" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="index.html" data-role="button" data-theme="d" data-icon="back" data-inline="true" data-direction="reverse">Volver</a>
+</fieldset>
+</form>
+</div>
+
+<div data-role="collapsible" data-content-theme="b" data-theme="b" class="ui-disabled" id="agendar" data-collapsed="false">
+<h3>Agendar Visita</h3>
+
+<div data-role="collapsible-set">
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Visita Frecuente</h3>
+
+<h3>Entrada</h3>
+
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+	   <legend><strong class="red">*</strong> Aplicar los dias:</legend>
+	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+	   <label for="checkbox-1">Lun</label>
+       <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+	   <label for="checkbox-2">Mar</label>
+       <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+	   <label for="checkbox-3">Mie</label>
+       <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+	   <label for="checkbox-4">Jue</label>
+       <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+	   <label for="checkbox-5">Vie</label>
+       <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+	   <label for="checkbox-6">Sab</label>
+       <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+	   <label for="checkbox-7">Dom</label>
+    </fieldset>
+</div>
+
+<div data-role="fieldcontain">
+<label for="hora"><strong class="red">*</strong> Hora:</label>
+<input name="hora" id="hora" type="date" data-role="datebox"  data-options='{"mode": "timebox", "overrideTimeFormat": 24}'>
+</div>
+
+<div data-role="fieldcontain">
+<label for="select-choice-a" class="select ui-select">Piso:</label>
+<select name="select-choice-a" id="select-choice-a" data-native-menu="false" tabindex="-1">
+<option>Seleccione...</option>
+<option value="standard">Ninguno</option>
+<option value="standard">Piso 1</option>
+<option value="rush">Piso 2</option>
+<option value="express">Piso 3</option>
+<option value="overnight">Piso 4</option>
+</select>
+</div>
+
+<div data-role="fieldcontain">
+    <label for="name">Oficina:</label>
+    <input type="text" name="name" id="name" value=""  />
+</div>
+
+<h3>Salida</h3>
+
+<div data-role="fieldcontain">
+<label for="mydate">Hora Salida:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="index.html" data-role="button" data-theme="d" data-icon="back" data-inline="true" data-direction="reverse">Volver</a>
+</div>
+
+
+<div data-role="collapsible" data-content-theme="c" data-theme="d">
+<h3>Sólo una vez</h3>
+
+<h3>Entrada</h3>
+ <div data-role="fieldcontain">   
+<label for="mydate"><strong class="red">*</strong> Fecha</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "calbox"}'>
+ </div>
+ 
+<div data-role="fieldcontain">
+<label for="mydate"><strong class="red">*</strong> Hora Estimada de Ingreso:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+
+<h3>Salida</h3>
+<div data-role="fieldcontain">
+<label for="mydate">Hora:</label>
+<input name="mydate" id="mydate" type="date" data-role="datebox" data-options='{"mode": "timeflipbox"}'>
+</div>
+<hr>
+<a href="#popup-agendar-ok" data-rel="dialog" data-role="button" data-theme="b" data-inline="true">Guardar</a>	
+<a href="index.html" data-role="button" data-theme="d" data-icon="back" data-inline="true" data-direction="reverse">Volver</a>
+</div>
+</div>
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!------------------------------------------------------ Pop Up VISITA AGENDADA >> OK -------------------------------------------------->
+<div data-role="page" id="popup-agendar-ok">
+<div data-role="header" data-theme="d"><h1>Hecho!</h1></div>
+   <div data-role="content" data-theme="c">
+    <p class="centrado"><strong>Moraga, Miguel:</strong></p>
+    <p class="centrado">Visita guardada Exitosamente.</p>
+    <a href="nueva-visita.html" data-role="button" data-theme="c">Volver</a>
+</div>
+</div><!-- /page -->
+
+<!------------------------------------------------- AGENDAR VISITA DISABLE ------------------------------------------------->
+<script>
+$('#enable').click(function() {
+    $('#agendar').removeClass('ui-disabled');
+    clicked = false; 
+});
+</script>
+
+</body>
+</html>

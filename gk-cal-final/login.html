@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   
+   <title>Gest Kontrol</title> 
+   
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+   <link rel="stylesheet" href="css/estilos.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+   
+</head> 
+
+<body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="inicio">
+
+<div data-role="header" data-position="inline" data-theme="b">
+	<h1>Gest Kontrol &#174;</h1>
+</div><!-- /header -->
+
+<!-- start content -->
+<div data-role="content">
+<div class="img-central"></div>
+	
+    <form action="" method="post">
+            <label for="basic" class="login">Usuario</label>
+            <input type="text" name="name" id="basic" data-mini="true" class="login" />
+
+           <label for="password" class="login">Password:</label>
+           <input type="password" name="password" id="password" value="" class="login" />
+           <p class="login"><a href="index.html" data-role="button" data-theme="b" rel="external">Ingresar</a></p>
+           <p class="login">¿No recuerda sus datos? <a href="index.html" rel="external">Ayuda</a></p>
+    </form>
+</div><!-- end content -->
+
+<div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+		<ul>
+			<li><a href="#">Ayuda</a></li>
+			<li><a href="#">Faqs</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

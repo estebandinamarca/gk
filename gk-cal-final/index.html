@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+   
+   <title>Gest Kontrol</title> 
+   
+   <meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+   <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+   <link rel="stylesheet" href="css/estilos.css" />
+   <link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" /> 
+   <link rel="stylesheet" type="text/css" href="css/jquery.mobile.simpledialog.min.css" /> 
+      
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/jquery.mobile-1.1.0.min.js"></script>
+   
+   <script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
+   <script type="text/javascript" src="js/datepicker-espanol.js"></script>
+   <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+   <script type="text/javascript" src="js/jqm-datebox.mode.flipbox.min.js"></script>
+      
+   <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>
+
+   </head> 
+
+<body> 
+<!-- Start of first page -->
+<div data-role="page" id="inicio">
+
+<div data-role="header" data-position="inline" data-theme="b">
+	<h1>Gest Kontrol &#174;</h1>
+	<a href="login.html" data-icon="delete" class="ui-btn-right" rel="external">Salir</a>
+</div><!-- /header -->
+
+<div data-role="content">
+
+<!-- <div class="titular">
+   <img src="img/avatar.jpg" width="100" height="100">
+   <h3 style="text-align:left">Empresas Los mejores | Bienvenido Administrador</h3>
+</div> -->
+
+<div class="ui-grid-a">
+   <div class="ui-block-a">
+      <div class="titular">
+         <img src="img/avatar.jpg" width="100" height="100">
+         <h4 style="text-align:left">ASDF Enterprices. <br/> Administrador</h4>
+      </div>   
+   </div>
+   <div class="ui-block-b">
+
+      <ul id="menu">
+
+         <li class="menu_right"><a href="#" class="drop"><img src="img/sistema-menu.png">Sistema</a>
+            <div class="dropdown_1column align_right">
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Configuración</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Mi Perfil</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Mi Perfil</a></li>
+                        </ul>  
+
+                      </div>
+            </div>
+         </li>
+
+          <li class="menu_right"><a href="#" class="drop"><img src="img/msje-menu.png">Mensajes <span>1</span></a><!-- Begin 4 columns Item -->
+              <div class="dropdown_2columns align_right"><!-- Begin 4 columns container -->
+                  <div class="col_2">
+                      <h2>Ultimos Mensajes</h2>
+                  </div>
+                  <div class="col_1">
+                      <h3>Recibidos de:</h3>
+                      <ul>
+                          <li><a href="#">Juan Los Palotes</a></li>
+                          <li><a href="#">Nicolas Castillo</a></li>
+                          <li><a href="#">ActiveDen</a></li>
+                          <li><a href="#">VideoHive</a></li>
+                          <li><a href="#">3DOcean</a></li>
+                      </ul>   
+                  </div>
+                  <div class="col_1">
+                      <h3>Enviados a:</h3>
+                      <ul>
+                          <li><a href="#">Nicolas Castillo</a></li>
+                          <li><a href="#">Gonzalo Heredia</a></li>
+                          <li><a href="#">PsdTuts</a></li>
+                          <li><a href="#">PhotoTuts</a></li>
+                          <li><a href="#">ActiveTuts</a></li>
+                      </ul>   
+                  </div>
+              </div><!-- End 4 columns container -->
+          </li><!-- End 4 columns Item -->
+
+         <li class="menu_right"><a href="#" class="drop"><img src="img/time-menu.png">En Espera <span class="rojo">2</span></a>
+            <div class="dropdown_2columns align_right">
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a><button style="height:10px;" data-mini="true">Hola!</button><button>Hola!</button></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>  
+                      </div>
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>  
+                      </div>
+
+            </div>
+         </li>
+
+
+          <li class="menu_right"><a href="#" class="drop"><img src="img/semana-menu.png">Semanal <span>45</span></a><!-- Begin 3 columns Item -->
+              <div class="dropdown_3columns align_right"><!-- Begin 3 columns container -->
+                  <div class="col_3">
+                      <h2>Visitas para esta Semana</h2>
+                  </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">Total: (12)</a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la mañana: (11)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la tarde: (1)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_3">
+                      <h2>Otros Comentarios</h2>
+                  </div>
+                  
+                  <div class="col_3">
+                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
+                  </div>       
+              </div><!-- End 3 columns container -->
+          </li><!-- End 3 columns Item -->
+
+
+
+          <li class="menu_right"><a href="#" class="drop"><img src="img/user-menu.png">Hoy <span>12</span></a><!-- Begin 3 columns Item -->
+              <div class="dropdown_3columns align_right"><!-- Begin 3 columns container -->
+                  <div class="col_3">
+                      <h2>Visitas para Hoy</h2>
+                  </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">Total: (12)</a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la mañana: (11)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la tarde: (1)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_3">
+                      <h2>Otros Comentarios</h2>
+                  </div>
+                  
+                  <div class="col_3">
+                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
+                  </div>       
+              </div><!-- End 3 columns container -->
+          </li><!-- End 3 columns Item -->
+      </ul>
+       
+   </div>    
+</div>
+
+
+      <ul data-role="listview" data-inset="true" data-dividertheme="b" data-count-theme="b" data-split-icon="delete">
+      <li data-role="list-divider">Gestión de Visitas</li>
+      <li><a href="nueva-visita.html" data-transition="slide"><img src="img/user.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Nueva Visita</h3><p class="ui-li-desc">Agregue una nueva visita, ingrese sus datos personales y confirme.</p></a></li>
+
+      <li><a href="editar-visitas.html" data-transition="slide"><img src="img/agendar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Agendar y Editar Visitas</h3><p class="ui-li-desc">Revise el listado completo de visitas. Edite o Elimine sus datos...</p><span class="ui-li-count ui-btn-up-b ui-btn-corner-all">12</span></a></li>
+
+      <li><a href="nueva-visita-calendario.html" rel="external"><img src="img/agendar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Agenda Rápida</h3><p class="ui-li-desc">Agregue nueva visita o Modifíquela utilizando calendario.</p></a></li>      
+      </ul>   
+
+    <ul data-role="listview" data-inset="true" data-dividertheme="b">
+    <li data-role="list-divider">Gestión de Proveedores</li>
+    <li><a href="nuevo-proveedor.html" data-transition="slide"><img src="img/agregar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Agregar Proveedores</h3>
+    <p class="ui-li-desc">Ingrese los datos de un nuevo Proveedor.</p></a></li>
+    <li><a href="validar-visitas.html" data-transition="slide"><img src="img/editar-cliente.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Editar Proveedores</h3>
+    <p class="ui-li-desc">Elimine alguna visita validada anteriormente.</p></a></li>
+    </ul>
+
+
+    <ul data-role="listview" data-inset="true" data-dividertheme="b">
+    <li data-role="list-divider">Gestión de Clientes</li>
+    <li><a href="nuevo-cliente.html" data-transition="slide"><img src="img/user.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Agregar Cliente</h3>
+    <p class="ui-li-desc">Ingrese los datos de un nuevo Cliente.</p></a></li>
+    <li><a href="#validar-visitas" data-transition="slide"><img src="img/user.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Editar Cliente</h3>
+    <p class="ui-li-desc">Elimine alguna visita validada anteriormente.</p></a></li>
+    </ul>
+
+
+    <ul data-role="listview" data-inset="true" data-dividertheme="b">
+    <li data-role="list-divider">Verificación y Validación</li>
+    <li><a href="validar-visita.html" data-transition="slide"><img src="img/validar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Validar Visitas</h3>
+    <p class="ui-li-desc">Valide alguna visita específica.</p></a></li>
+    <li><a href="#" data-transition="slide"><img src="img/modificar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Validaciones Efectuadas</h3>
+    <p class="ui-li-desc">Elimine alguna visita validada anteriormente.</p></a></li>
+    <li><a href="#" data-transition="slide"><img src="img/radar.png" alt="Descripcion" class="ui-li-icon iconos"><h3 class="ui-li-heading">Verificar Visitas</h3>
+    <p class="ui-li-desc">Verifique alguna visita específica.</p></a></li>
+    </ul>
+
+    <ul data-role="listview" data-dividertheme="d" data-inset="true">
+    <li data-role="list-divider">Mi Cuenta</li>
+    <li><a href="#coche">Mi Perfil</a></li>
+    <li><a href="#coche">Administrar Perfiles</a></li>
+    </ul>
+
+</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- ····················· Pop Up HOY ················· -->
+<div data-role="page" id="hoy">
+<div data-role="header" data-theme="b"><h1>Visitas para Hoy</h1></div>
+
+<div data-role="content">  
+<h3 style="text-align:center">22 octubre 2012</h3>
+
+<div>
+<ul data-role="listview" data-inset="true" data-dividertheme="d">
+   <li data-role="list-divider">A</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 16381214-2</p></a></li>
+   <li data-icon="gear"><a id="opendialog-patente" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+      <li data-role="list-divider">B</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+      <li data-role="list-divider">C</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Castillo, Nicolás</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 798315031337</p></a></li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Contreras Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+</ul>
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+<!-- ····················· Pop Up SEMANA················· -->
+<div data-role="page" id="semana">
+<div data-role="header" data-theme="b"><h1>Visitas esta Semana</h1></div>
+
+<div data-role="content">  
+<h3 style="text-align:center">Semana: 22/28 octubre 2012</h3>
+
+<div>
+<ul data-role="listview" data-inset="true" data-dividertheme="d">
+   <li data-role="list-divider">A</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>12/08/12 | Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 16381214-2</p></a></li>
+   <li data-icon="gear"><a id="opendialog-patente" href="#" data-transition="pop"><h3 class="ui-li-heading">Acuña Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+      <li data-role="list-divider">B</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Barría Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+      <li data-role="list-divider">C</li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Castillo, Nicolás</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00 | Rut: 798315031337</p></a></li>
+   <li data-icon="gear"><a id="opendialog" href="#" data-transition="pop"><h3 class="ui-li-heading">Contreras Moraga Miguel</h3><p class="ui-li-desc"><strong>Ingreso:</strong> 12:30 - <strong>Salida:</strong> 18:00</p></a></li>
+</ul>
+</div>
+</div><!-- /content -->
+</div><!-- /page -->
+
+
+
+
+
+
+</body>
+
+</html>
