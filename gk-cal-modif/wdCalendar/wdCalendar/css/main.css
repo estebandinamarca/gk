@@ -46,7 +46,7 @@ div, span, td
 {
 	font-family:Arial,Verdana,sans-serif;
     text-shadow:none!important;
-    font-size: 13px; 
+    /*font-size: 13px;*/ 
 }
 a:link, a:visited
 {

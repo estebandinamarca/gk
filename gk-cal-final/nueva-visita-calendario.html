@@ -109,7 +109,7 @@
                 if(data)
                 {
                     var url = StrFormat(eurl,data);
-                    OpenModelWindow(url,{ width: 600, height: 400, caption:"Manage  The Calendar",onclose:function(){
+                    OpenModelWindow(url,{ width: 600, height: 450, caption:"Agendar Visita",onclose:function(){
                        $("#gridcontainer").reload();
                     }});
                 }
@@ -184,7 +184,7 @@
             //Add a new event
             $("#faddbtn").click(function(e) {
                 var url ="wdCalendar/wdCalendar/edit.php";
-                OpenModelWindow(url,{ width: 500, height: 400, caption: "Create New Calendar"});
+                OpenModelWindow(url,{ width: 500, height: 450, caption: "Agendar Nueva Visita"});
             });
             //go to today
             $("#showtodaybtn").click(function(e) {
@@ -225,59 +225,206 @@
 </div>
 
 <div data-role="content"> <!-- start content -->
-      <div id="calhead" style="padding-left:1px;padding-right:1px;">          
-            <div class="cHead"><div class="ftitle">My Calendar</div>
-            <div id="loadingpannel" class="ptogtitle loadicon" style="display: none;">Loading data...</div>
-             <div id="errorpannel" class="ptogtitle loaderror" style="display: none;">Sorry, could not load your data, please try again later</div>
-            </div>          
-            
-            <div id="caltoolbar" class="ctoolbar">
-              <div id="faddbtn" class="fbutton">
-                <div><span title='Click to Create New Event' class="addcal">
 
-                New Event                
-                </span></div>
-            </div>
-            <div class="btnseparator"></div>
-             <div id="showtodaybtn" class="fbutton">
-                <div><span title='Click to back to today' class="showtoday">
-                Today</span></div>
-            </div>
-              <div class="btnseparator"></div>
+<!-- <div class="ui-grid-a">
+   <div class="ui-block-a">
+      <div class="titular">
+         <img src="img/avatar.jpg" width="100" height="100">
+         <h4 style="text-align:left">ASDF Enterprices. <br/> Administrador</h4>
+      </div>   
+   </div>
+   <div class="ui-block-b">
 
-            <div id="showdaybtn" class="fbutton">
-                <div><span title='Day' class="showdayview">Day</span></div>
+      <ul id="menu">
+
+         <li class="menu_right"><a href="#" class="drop"><img src="img/sistema-menu.png">Sistema</a>
+            <div class="dropdown_1column align_right">
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Configuración</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Mi Perfil</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Mi Perfil</a></li>
+                        </ul>  
+
+                      </div>
             </div>
-              <div  id="showweekbtn" class="fbutton fcurrent">
-                <div><span title='Week' class="showweekview">Week</span></div>
-            </div>
-              <div  id="showmonthbtn" class="fbutton">
-                <div><span title='Month' class="showmonthview">Month</span></div>
+         </li>
+
+          <li class="menu_right"><a href="#" class="drop"><img src="img/msje-menu.png">Mensajes <span>1</span></a>
+              <div class="dropdown_2columns align_right">
+                  <div class="col_2">
+                      <h2>Ultimos Mensajes</h2>
+                  </div>
+                  <div class="col_1">
+                      <h3>Recibidos de:</h3>
+                      <ul>
+                          <li><a href="#">Juan Los Palotes</a></li>
+                          <li><a href="#">Nicolas Castillo</a></li>
+                          <li><a href="#">ActiveDen</a></li>
+                          <li><a href="#">VideoHive</a></li>
+                          <li><a href="#">3DOcean</a></li>
+                      </ul>   
+                  </div>
+                  <div class="col_1">
+                      <h3>Enviados a:</h3>
+                      <ul>
+                          <li><a href="#">Nicolas Castillo</a></li>
+                          <li><a href="#">Gonzalo Heredia</a></li>
+                          <li><a href="#">PsdTuts</a></li>
+                          <li><a href="#">PhotoTuts</a></li>
+                          <li><a href="#">ActiveTuts</a></li>
+                      </ul>   
+                  </div>
+              </div>
+          </li>
+
+         <li class="menu_right"><a href="#" class="drop"><img src="img/time-menu.png">En Espera <span class="rojo">2</span></a>
+            <div class="dropdown_2columns align_right">
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a><button style="height:10px;" data-mini="true">Hola!</button><button>Hola!</button></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>  
+                      </div>
+                      <div class="col_1">
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>
+
+                        <ul class="greybox">
+                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                        </ul>  
+                      </div>
 
             </div>
-            <div class="btnseparator"></div>
-              <div  id="showreflashbtn" class="fbutton">
-                <div><span title='Refresh view' class="showdayflash">Refresh</span></div>
-                </div>
-             <div class="btnseparator"></div>
-            <div id="sfprevbtn" title="Prev"  class="fbutton">
-              <span class="fprev"></span>
+         </li>
 
-            </div>
-            <div id="sfnextbtn" title="Next" class="fbutton">
-                <span class="fnext"></span>
-            </div>
-            <div class="fshowdatep fbutton">
-                    <div>
-                        <input type="hidden" name="txtshow" id="hdtxtshow" />
-                        <span id="txtdatetimeshow">Loading</span>
 
-                    </div>
-            </div>
-            
-            <div class="clear"></div>
-            </div>
+          <li class="menu_right"><a href="#" class="drop"><img src="img/semana-menu.png">Semanal <span>45</span></a>
+              <div class="dropdown_3columns align_right">
+                  <div class="col_3">
+                      <h2>Visitas para esta Semana</h2>
+                  </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">Total: (12)</a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la mañana: (11)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la tarde: (1)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_3">
+                      <h2>Otros Comentarios</h2>
+                  </div>
+                  
+                  <div class="col_3">
+                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
+                  </div>       
+              </div>
+          </li>
+
+
+
+          <li class="menu_right"><a href="#" class="drop"><img src="img/user-menu.png">Hoy <span>12</span></a>
+              <div class="dropdown_3columns align_right">
+                  <div class="col_3">
+                      <h2>Visitas para Hoy</h2>
+                  </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">Total: (12)</a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la mañana: (11)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la tarde: (1)</a></li>
+                      </ul>   
+                  </div>
+
+                  <div class="col_3">
+                      <h2>Otros Comentarios</h2>
+                  </div>
+                  
+                  <div class="col_3">
+                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
+                  </div>       
+              </div>
+          </li>
+      </ul>
+       
+   </div>    
+</div>
+<hr> -->
+
+
+      <div id="calhead" style="padding-left:1px;padding-right:0px;">
+        <div class="cHead"><div class="ftitle">Reserva Rápida</div>
+          <div id="loadingpannel" class="ptogtitle loadicon" style="display: none;">Cargando...</div>
+          <div id="errorpannel" class="ptogtitle loaderror" style="display: none;">Por el momento no podemos cargar el contenido...</div>
+        </div>          
+        
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <!-- <div id="caltoolbar" class="ctoolbar"> -->            
+            <!-- <div data-role="fieldcontain"> -->
+            <div style="width:auto; height:100%; border-left: 1px solid #CCC; padding: 25px 10px;">
+              <fieldset data-role="controlgroup" data-type="horizontal" >
+                <input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" />
+                <label for="radio-choice-21" id="faddbtn">Nueva Visita</label>
+                <input type="radio" name="radio-choice-2" id="radio-choice-22" value="choice-2"  />
+                <label for="radio-choice-22" id="showdaybtn">Día</label>
+
+                <input type="radio" name="radio-choice-2" id="radio-choice-23" value="choice-3" checked="checked" />
+                <label for="radio-choice-23" id="showweekbtn">Semana</label>
+
+                <input type="radio" name="radio-choice-2" id="radio-choice-24" value="choice-4"  />
+                <label for="radio-choice-24" id="showmonthbtn">Mes</label>
+              </fieldset>
+            </div>  
+            <!-- </div> -->            
+        <!-- </div> -->    
       </div>
+    <div class="ui-block-b">
+        <!-- <div id="caltoolbar" class="ctoolbar ctoolbar-right"> -->
+        <div style="width:auto; height:100%; border-right: 1px solid #CCC; padding: 25px 10px;">
+            <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+              <a href="#" id="sfprevbtn" data-role="button" data-icon="arrow-l">Anterior</a>
+              <a href="#" id="sfnextbtn" data-role="button" data-icon="arrow-r" data-iconpos="right">Siguiente</a>
+              <a href="#" id="txtdatetimeshow" style="font-size: 15px; color:#000; padding-left: 15px;"></a>  
+            </div>
+        </div>    
+        <!-- </div> -->
+
+    </div>      
+    </div>
+
+  </div>
 
           <div style="padding:1px;">
               <div class="t1 chromeColor">&nbsp;</div>

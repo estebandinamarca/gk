@@ -26,7 +26,7 @@ border-bottom:2px solid #c3d9ff;
 	background-color:#c3d9ff;
 	overflow:hidden;
 	font-size:12px;
-	line-height:14px
+	line-height:14px;
  }
 #gridcontainer {
 	background:#c3d9ff;
@@ -569,13 +569,13 @@ border-bottom:2px solid #c3d9ff;
 	font-style:italic
 }
 .cb-key {
-	TEXT-ALIGN: left; PADDING-BOTTOM: 0.4em; PADDING-LEFT: 0px; PADDING-RIGHT: 1em; WHITE-SPACE: nowrap; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; PADDING-TOP: 0.4em
+	text-align: left; PADDING-BOTTOM: 0.4em; PADDING-LEFT: 0px; PADDING-RIGHT: 1em; WHITE-SPACE: nowrap; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; PADDING-TOP: 0.4em
 }
 .cb-value {
 	PADDING-BOTTOM: 0.4em; PADDING-LEFT: 0px; WIDTH: 95%; PADDING-RIGHT: 0px; PADDING-TOP: 0.4em;	
 }
 .cb-textarea {
-	HEIGHT: 3.9em
+	height: 3.9em
 }
 .textbox-fill-input {
 	width:95%;
@@ -584,9 +584,30 @@ border-bottom:2px solid #c3d9ff;
 	border-color:#666 #ccc #ccc #666
 }
 .lk {
-	/*WHITE-SPACE: nowrap;*/ COLOR: #FFF; CURSOR: pointer; TEXT-DECORATION: none; background: #CCC; line-height: 15px; font-size: 15px; -webkit-border-radius: 8px; border-radius: 8px; padding: 10px;
+	/*WHITE-SPACE: nowrap;*/
+	color: #000;
+	cursor: pointer;
+	text-decoration: none;
+	/*background: #CCC*/;
+	line-height: 15px;
+	font-size: 15px;
+	/*-webkit-border-radius: 8px; border-radius: 8px;*/
+	padding: 8px;
 	text-shadow: 1px 1px 1px #949494; filter: dropshadow(color=#949494, offx=1, offy=1);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #ccc;
+    border: solid 1px #ccc;
+    background-image: -webkit-linear-gradient(top, #fff, #f1f1f1);
+    background-image: -moz-linear-gradient(top, #fff, #f1f1f1);
+    background-image: -o-linear-gradient(top, #fff, #f1f1f1);
+    background-image: -ms-linear-gradient(top, #fff, #f1f1f1);
+    background-image: linear-gradient(to bottom, #fff, #f1f1f1);
+    font-family: Arial;
+    font-weight: bold;
 }
+
 .lk-test {
 	/*WHITE-SPACE: nowrap;*/ COLOR: #000; CURSOR: pointer; TEXT-DECORATION: none; background: #FFF; line-height: 15px; font-size: 15px; /*-webkit-border-radius: 8px; border-radius: 8px;*/ padding: 10px;
 	text-shadow: 1px 1px 1px #949494; filter: dropshadow(color=#949494, offx=1, offy=1);

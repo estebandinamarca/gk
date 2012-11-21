@@ -5,6 +5,8 @@
     padding-right:15px;
     cursor:pointer;
     overflow:hidden;
+    height: 30px!important;
+    /*padding: 10px 15px 10px 0;*/
 }
 input.bbit-dropdown.hover
 {  
