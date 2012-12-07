@@ -40,7 +40,6 @@ input[type="file"]
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   width: 150px; }
-  
 
 /*input[type="file"]
 {
@@ -93,19 +92,9 @@ div.titular img {height:40px; float:left; text-align:left; margin:5px 0 0 15px; 
 div.titular h4 {float:left; text-align:left; line-height:22px; margin:25px 0 0 20px; font-size:14px;}   
 div.gk-menu {float: right; height: 50px; width: 60%;}
 
-#menu {
-  list-style:none;
-  width:100%;
-  margin:0px;
-  height:50px;
-  padding:0px;
-  float: right;
-  background: none;
-}
+#menu {list-style:none; width:100%; margin:0px 15px 0 0; height:50px; padding:0px; float: right; background: none;}
 
-#menu li {
-  /*width: 80px;
-  height: 50px;*/
+#menu li { 
   float:left;
   display:block;
   text-align:center;
@@ -115,12 +104,8 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   border:none;
   z-index: 999999;
 }
-#menu li.principal {width: 80px; height: 50px;}
 
-#menu li:hover {
-  border: 0px solid #777777;
-  padding: 0px;
-  background: #FFF;
+#menu li:hover {border: 0px solid #777777; padding: 0px; background: #FFF;
   /*background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#EEEEEE));*/
   /*-moz-border-radius: 5px 5px 0px 0px;
@@ -140,8 +125,10 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   font-weight: normal;
   text-align: center;
   display: block!important;
-  /*width: 80px;
-  height: 50px;*/
+  /*width: 80px;*/
+  height: 50px;
+  padding: 5px 0 0 0;
+  margin: 0;
 }
 
 /*#menu li a img {
@@ -152,52 +139,48 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   display: block;
 }*/
 
-#menu li a p span {margin-top: 20px!important; }
-#menu li a p span.rojo {margin-top: 20px!important; }
+#menu li.principal {width: 80px; height: 50px;}
+
+#menu li a img {width: 38px; height: 38px; margin: 0px 5px; border: 1px solid #CCC;}
+#menu li.imagen {height: 50px; margin: 0 0 0 70px;}
+
+#menu li.menu-mensajes {height: 50px; display: block;background: url(../img/menu-mensaje.png) bottom no-repeat;}
+#menu li.menu-mensajes:hover {background: url(../img/menu-mensaje-h.png) bottom no-repeat #FFF;}
+
+#menu li.menu-dia {height: 50px; display: block; background: url(../img/menu-dia.png) bottom no-repeat;}
+#menu li.menu-dia:hover {background: url(../img/menu-dia-h.png) bottom no-repeat #FFF;}
+
+#menu li.menu-semana {height: 50px; display: block; background: url(../img/menu-semana.png) bottom no-repeat;}
+#menu li.menu-semana:hover {background: url(../img/menu-semana-h.png) bottom no-repeat #FFF;}
 
 #menu li a span {
   text-align: center!important;
   text-decoration: none;
-  /*position: absolute;
-  bottom: 0px;
-  right: 0px;
-  z-index: 1000;*/
-  background: #FFF;
-  color: #4c7fb1;
+  background: #5891bf;
+  color: #FFF;
   -webkit-border-radius: 120px;
   border-radius: 120px;
   padding: 2px 5px;
-  margin: 10px 0px 0px 30px;
+  margin: 0px 0px 0px 32px;
   margin-top: 20px!important; 
   -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, .3);
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, .3);     
-  font-size: 11px!important;
+  font-size: 12px!important;
   font-weight: bold;
-  /*width: 18px;
-  height: 15px;
-  line-height: 15px;*/
+  z-index: 900000!important;
+  text-shadow: 1px 1px 1px #12265c;
+  filter: dropshadow(color=#12265c, offx=1, offy=1);  
 }
 
 #menu li a span.rojo {color: #e22b2b;}
-
-#menu li:hover a {
-  color:#161616;
-  text-shadow: 1px 1px 1px #ffffff;
-}
-/*#menu li .drop {
-  padding:0px 10px;
-  background:url("img/drop.png") no-repeat right 8px;
-}*/
-/*#menu li:hover .drop {
-  background:url("img/drop.png") no-repeat right 7px;
-}*/
+#menu li:hover a {color:#161616; text-shadow: 1px 1px 1px #ffffff;}
 
 .dropdown_1column, 
 .dropdown_2columns, 
 .dropdown_3columns, 
 .dropdown_4columns,
 .dropdown_5columns {
-  margin:25px auto;
+  margin:-10px auto;
   float:left;
   position:absolute;
   left:-999em; /* Hides the drop down */
@@ -206,13 +189,10 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   border:0px solid #777777;
   border-top:none;
   background: #FFF;
-  /*background-position:90% 0%;*/ 
-  /*background: -moz-linear-gradient(top, #EEEEEE, #BBBBBB);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#BBBBBB));*/
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  z-index: 999999;
+  z-index:888888;
   -webkit-box-shadow:  0px 3px 2px 1px rgba(0, 0, 0, .2);
   box-shadow:  0px 3px 2px 1px rgba(0, 0, 0, .2);
 }
@@ -222,19 +202,6 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
 .dropdown_3columns {width: 420px;}
 .dropdown_4columns {width: 560px;}
 .dropdown_5columns {width: 700px;}
-
-/*span.menu-flecha { 
-  background: #FFF!important;
-  height: 100px;
-  margin: 0;
-  padding: 10px;
-  width: 420px;
-  display: block;
-  -webkit-box-shadow:  0px 2px 2px 0px rgba(0, 0, 0, .3);
-  box-shadow:  0px 2px 2px 0px rgba(0, 0, 0, .3);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-}*/
 
 #menu li:hover .dropdown_1column, 
 #menu li:hover .dropdown_2columns, 
@@ -276,7 +243,13 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
 
 #menu li:hover .align_right {
   left:auto;
-  right:-15px;
+  right: -14px;
+  top:auto;
+}
+
+#menu li:hover .align_right_final {
+  left:auto;
+  right: 0px;
   top:auto;
 }
 
@@ -284,26 +257,30 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   font-family:Arial, Helvetica, sans-serif;
   line-height:21px;
   font-size:12px;
-  text-align:left;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  text-align:center;
+  /*text-shadow: 1px 1px 1px #FFFFFF;*/
 }
 #menu h2 {
   font-size:21px;
   font-weight:400;
   letter-spacing:-1px;
-  margin:7px 0 9px 0;
-  padding-bottom:14px;
+  margin:5px 0 8px 0;
+  padding-bottom:10px;
   border-bottom:1px solid #DDDDDD;
+  text-align: center;
 }
 #menu h3 {
   font-size:14px;
-  margin:7px 0 9px 0;
-  padding-bottom:7px;
-  border-bottom:1px solid #888888;
+  margin:4px 0 3px 0;
+  padding-bottom:3px;
+  /*border-bottom:1px solid #DDDDDD;*/
+  text-align: center;
 }
 #menu p {
   line-height:18px;
-  margin:0 0 10px 0;
+  margin:0 0 8px 0;
+  padding-bottom: 6px;
+  border-bottom:1px solid #DDDDDD;
 }
 
 #menu li:hover div a {

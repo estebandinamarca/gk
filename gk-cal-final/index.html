@@ -23,6 +23,13 @@
       
    <script type="text/javascript" src="js/jquery.mobile.simpledialog2.min.js"></script>
 
+   <script type="text/javascript">
+    $(document).bind('pageinit', function(event){
+        //$('.weas').addClass('menu-mensajes');    
+        $('.ui-link').removeClass('ui-link');
+    });
+   </script>
+
    </head> 
 
 <body> 
@@ -36,149 +43,97 @@
 
 <div class="gk-header">
       <div class="titular">
-         <img src="img/avatar.jpg" width="100" height="100">
-         <h4 style="text-align:left"></h4>
+         <a href="index.html"><img src="img/gk-logo.png" width="143" height="40"></a>
+         <!-- <h4 style="text-align:left"></h4> -->
       </div>   
    <!-- </div>
    <div class="ui-block-b"> -->
 
     <div class="gk-menu">  
       <ul id="menu">
-         <li class="menu_right principal"><a href="#"><!-- <img src="img/sistema-menu.png">Sistema --></a>
-            <div class="dropdown_1column align_right">
+         <li class="menu_right principal imagen"><a href="#"><img src="img/perfil.png"></a>
+            <div class="dropdown_1column align_right_final">
+                      <div class="col_1">
+                        <h3>Carey Abogados</h3>
+                        <p><strong>Administrador</strong></p>
+                      </div>
                       <div class="col_1">
                         <ul class="greybox">
                           <li><a href="#">Configuración</a></li>
                         </ul>
 
                         <ul class="greybox">
-                          <li><a href="#">Mi Perfil</a></li>
+                          <li><a href="#">Perfiles</a></li>
                         </ul>
 
                         <ul class="greybox">
-                          <li><a href="#">Mi Perfil</a></li>
+                          <li><a href="#"><strong>Salir</strong></a></li>
                         </ul>  
 
                       </div>
             </div>
          </li>
 
-          <li class="menu_right principal"><a href="#"><!-- <img src="img/msje-menu.png">Mensajes --><span>4</span></a>
+          <li class="menu_right principal menu-mensajes"><a href="#"><span>5</span></a>
           </li>
 
-         <li class="menu_right principal"><a href="#"><!-- <img src="img/time-menu.png">En Espera --><span class="rojo">2</span></a>
-            <div class="dropdown_2columns align_right">
-                      <div class="col_1">
-                        <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes | 16381214-2</a><!-- <button style="height:10px;" data-mini="true">Hola!</button><button>Hola!</button> --></li>
-                        </ul>
+         <li class="menu_right principal menu-semana"><a href="#"><span>2</span></a>
 
-                        <ul class="greybox">
-                          <li><a href="#">Felipe Guzmán | 16381214-2</a></li>
-                        </ul>  
-                      </div>
-                      <div class="col_1">
-                        <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes de la Barra Corta | Rut: 16381214-2</a></li>
-                        </ul>
+              <div class="dropdown_1column align_right">
+                  <div class="col_1">
+                    <h2>Semana</h2>
+                  </div>                
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">Total: <strong>12</strong></a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la mañana: <strong>1</strong></a></li>
+                      </ul>   
+                  </div>
 
-                        <ul class="greybox">
-                          <li><a href="#">Felipe Pérez | Rut: 16381214-2</a></li>
-                        </ul>  
-                      </div>
-
-            </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#">En la tarde: <strong>0</strong></a></li>
+                      </ul>   
+                  </div>
+               </div>
          </li>
 
 
-          <li class="menu_right principal"><a href="#"><!-- <img src="img/semana-menu.png">Semanal --><span>45</span></a>
+          <li class="menu_right principal menu-dia"><a href="#"><span>0</span></a>
             
               <div class="dropdown_1column align_right">
-              <!-- <span class="menu-flecha"> -->
-                  <!-- <div class="col_3">
-                      <h2>Visitas para esta Semana</h2>
-                  </div> -->
+                  <div class="col_1">
+                    <h2>Hoy</h2>
+                  </div>
                   <div class="col_1">
                       <ul class="greybox">
-                          <li><a href="#" class="no-class">Total: (12)</a></li>
+                          <li><a href="#">Total: <strong>12</strong></a></li>
                       </ul>   
                   </div>
                   
                   <div class="col_1">
                       <ul class="greybox">
-                          <li><a href="#">En la mañana: (11)</a></li>
+                          <li><a href="#">En la mañana: <strong>1</strong></a></li>
                       </ul>   
                   </div>
 
                   <div class="col_1">
                       <ul class="greybox">
-                          <li><a href="#">En la tarde: (1)</a></li>
+                          <li><a href="#">En la tarde: <strong>0</strong></a></li>
                       </ul>   
                   </div>
-
-                  <!-- <div class="col_3">
-                      <h2>Otros Comentarios</h2>
-                  </div> -->
-                  
-                  <!-- <div class="col_3">
-                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
-                  </div> -->
-              <!-- </span> -->           
               </div>  
-          </li>
-
-
-
-          <li class="menu_right principal"><a href="#" class="menu-mensaje"><!-- <img src="img/user-menu.png">Hoy --><span>12</span></a>
-              <div class="dropdown_3columns align_right">
-                  <div class="col_3">
-                      <h2>Visitas para Hoy</h2>
-                  </div>
-                  <div class="col_1">
-                      <ul class="greybox">
-                          <li><a href="#">Total: (12)</a></li>
-                      </ul>   
-                  </div>
-                  
-                  <div class="col_1">
-                      <ul class="greybox">
-                          <li><a href="#">En la mañana: (11)</a></li>
-                      </ul>   
-                  </div>
-
-                  <div class="col_1">
-                      <ul class="greybox">
-                          <li><a href="#">En la tarde: (1)</a></li>
-                      </ul>   
-                  </div>
-
-                  <div class="col_3">
-                      <h2>Otros Comentarios</h2>
-                  </div>
-                  
-                  <div class="col_3">
-                      <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
-                  </div>       
-              </div>
           </li>
       </ul>
 </div>      
 </div> 
 
 <div data-role="content">
-
-<!-- <div class="titular">
-   <img src="img/avatar.jpg" width="100" height="100">
-   <h3 style="text-align:left">Empresas Los mejores | Bienvenido Administrador</h3>
-</div> -->
-
-<!-- <div class="ui-grid-a">
-   <div class="ui-block-a"> -->
-
-      
-   <!-- </div> -->    
-<!-- </div> -->
-
 
       <ul data-role="listview" data-inset="true" data-dividertheme="b" data-count-theme="b" data-split-icon="delete">
       <li data-role="list-divider">Gestión de Visitas</li>
