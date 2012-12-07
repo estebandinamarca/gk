@@ -29,30 +29,22 @@
 <!-- Start of first page -->
 <div data-role="page" id="inicio">
 
-<div data-role="header" data-position="inline" data-theme="b">
+<!-- <div data-role="header" data-position="inline" data-theme="b">
 	<h1>Gest Kontrol &#174;</h1>
 	<a href="login.html" data-icon="delete" class="ui-btn-right" rel="external">Salir</a>
-</div><!-- /header -->
+</div> --><!-- /header -->
 
-<div data-role="content">
-
-<!-- <div class="titular">
-   <img src="img/avatar.jpg" width="100" height="100">
-   <h3 style="text-align:left">Empresas Los mejores | Bienvenido Administrador</h3>
-</div> -->
-
-<div class="ui-grid-a">
-   <div class="ui-block-a">
+<div class="gk-header">
       <div class="titular">
          <img src="img/avatar.jpg" width="100" height="100">
-         <h4 style="text-align:left">ASDF Enterprices. <br/> Administrador</h4>
+         <h4 style="text-align:left"></h4>
       </div>   
-   </div>
-   <div class="ui-block-b">
+   <!-- </div>
+   <div class="ui-block-b"> -->
 
+    <div class="gk-menu">  
       <ul id="menu">
-
-         <li class="menu_right"><a href="#" class="drop"><img src="img/sistema-menu.png">Sistema</a>
+         <li class="menu_right principal"><a href="#"><!-- <img src="img/sistema-menu.png">Sistema --></a>
             <div class="dropdown_1column align_right">
                       <div class="col_1">
                         <ul class="greybox">
@@ -71,52 +63,27 @@
             </div>
          </li>
 
-          <li class="menu_right"><a href="#" class="drop"><img src="img/msje-menu.png">Mensajes <span>1</span></a><!-- Begin 4 columns Item -->
-              <div class="dropdown_2columns align_right"><!-- Begin 4 columns container -->
-                  <div class="col_2">
-                      <h2>Ultimos Mensajes</h2>
-                  </div>
-                  <div class="col_1">
-                      <h3>Recibidos de:</h3>
-                      <ul>
-                          <li><a href="#">Juan Los Palotes</a></li>
-                          <li><a href="#">Nicolas Castillo</a></li>
-                          <li><a href="#">ActiveDen</a></li>
-                          <li><a href="#">VideoHive</a></li>
-                          <li><a href="#">3DOcean</a></li>
-                      </ul>   
-                  </div>
-                  <div class="col_1">
-                      <h3>Enviados a:</h3>
-                      <ul>
-                          <li><a href="#">Nicolas Castillo</a></li>
-                          <li><a href="#">Gonzalo Heredia</a></li>
-                          <li><a href="#">PsdTuts</a></li>
-                          <li><a href="#">PhotoTuts</a></li>
-                          <li><a href="#">ActiveTuts</a></li>
-                      </ul>   
-                  </div>
-              </div><!-- End 4 columns container -->
-          </li><!-- End 4 columns Item -->
+          <li class="menu_right principal"><a href="#"><!-- <img src="img/msje-menu.png">Mensajes --><span>4</span></a>
+          </li>
 
-         <li class="menu_right"><a href="#" class="drop"><img src="img/time-menu.png">En Espera <span class="rojo">2</span></a>
+         <li class="menu_right principal"><a href="#"><!-- <img src="img/time-menu.png">En Espera --><span class="rojo">2</span></a>
             <div class="dropdown_2columns align_right">
                       <div class="col_1">
                         <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a><button style="height:10px;" data-mini="true">Hola!</button><button>Hola!</button></li>
+                          <li><a href="#">Juanito los Palotes | 16381214-2</a><!-- <button style="height:10px;" data-mini="true">Hola!</button><button>Hola!</button> --></li>
                         </ul>
 
                         <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                          <li><a href="#">Felipe Guzmán | 16381214-2</a></li>
                         </ul>  
                       </div>
                       <div class="col_1">
                         <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                          <li><a href="#">Juanito los Palotes de la Barra Corta | Rut: 16381214-2</a></li>
                         </ul>
 
                         <ul class="greybox">
-                          <li><a href="#">Juanito los Palotes Rut: 16381214-2</a></li>
+                          <li><a href="#">Felipe Pérez | Rut: 16381214-2</a></li>
                         </ul>  
                       </div>
 
@@ -124,14 +91,16 @@
          </li>
 
 
-          <li class="menu_right"><a href="#" class="drop"><img src="img/semana-menu.png">Semanal <span>45</span></a><!-- Begin 3 columns Item -->
-              <div class="dropdown_3columns align_right"><!-- Begin 3 columns container -->
-                  <div class="col_3">
+          <li class="menu_right principal"><a href="#"><!-- <img src="img/semana-menu.png">Semanal --><span>45</span></a>
+            
+              <div class="dropdown_1column align_right">
+              <!-- <span class="menu-flecha"> -->
+                  <!-- <div class="col_3">
                       <h2>Visitas para esta Semana</h2>
-                  </div>
+                  </div> -->
                   <div class="col_1">
                       <ul class="greybox">
-                          <li><a href="#">Total: (12)</a></li>
+                          <li><a href="#" class="no-class">Total: (12)</a></li>
                       </ul>   
                   </div>
                   
@@ -147,20 +116,21 @@
                       </ul>   
                   </div>
 
-                  <div class="col_3">
+                  <!-- <div class="col_3">
                       <h2>Otros Comentarios</h2>
-                  </div>
+                  </div> -->
                   
-                  <div class="col_3">
+                  <!-- <div class="col_3">
                       <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
-                  </div>       
-              </div><!-- End 3 columns container -->
-          </li><!-- End 3 columns Item -->
+                  </div> -->
+              <!-- </span> -->           
+              </div>  
+          </li>
 
 
 
-          <li class="menu_right"><a href="#" class="drop"><img src="img/user-menu.png">Hoy <span>12</span></a><!-- Begin 3 columns Item -->
-              <div class="dropdown_3columns align_right"><!-- Begin 3 columns container -->
+          <li class="menu_right principal"><a href="#" class="menu-mensaje"><!-- <img src="img/user-menu.png">Hoy --><span>12</span></a>
+              <div class="dropdown_3columns align_right">
                   <div class="col_3">
                       <h2>Visitas para Hoy</h2>
                   </div>
@@ -189,12 +159,25 @@
                   <div class="col_3">
                       <p>Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique sed odio.</p>   
                   </div>       
-              </div><!-- End 3 columns container -->
-          </li><!-- End 3 columns Item -->
+              </div>
+          </li>
       </ul>
-       
-   </div>    
-</div>
+</div>      
+</div> 
+
+<div data-role="content">
+
+<!-- <div class="titular">
+   <img src="img/avatar.jpg" width="100" height="100">
+   <h3 style="text-align:left">Empresas Los mejores | Bienvenido Administrador</h3>
+</div> -->
+
+<!-- <div class="ui-grid-a">
+   <div class="ui-block-a"> -->
+
+      
+   <!-- </div> -->    
+<!-- </div> -->
 
 
       <ul data-role="listview" data-inset="true" data-dividertheme="b" data-count-theme="b" data-split-icon="delete">
