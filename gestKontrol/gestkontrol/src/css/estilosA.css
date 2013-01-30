@@ -1,0 +1,27 @@
+/*
+Gest Kontrol CSS
+*/
+
+/* ICONOS LEFT */
+.iconos { padding: 15px 0 0 0}
+
+/* LOGIN */
+.img-central {background: url(../img/logo.png) center top; height:100px; width:290px; margin:0 auto 10px auto;}
+label.login {margin:0 auto; max-width:290px; text-align:left;}
+input.login {margin:0 auto; max-width:290px}
+p.login {margin:10px auto 0 auto; width:290px!important; text-align:center;}
+
+/* DIVS Y MÁRGENES */
+div.botones-centrados {margin:0 auto; max-width:800px; height:auto;}
+div.margen-inferior { margin-bottom:20px!important}
+
+/* CENTRAR TEXTO */
+h4.centrado, p.centrado, h1.centrado {text-align:center!important}
+
+input.patente {margin:0 auto; max-width:200px!important}
+
+a div {text-decoration: none;}
+
+/* radio buttons */
+.row-b .ui-btn { text-align: center;  width: 100%;}
+div.radio-responsivo .ui-controlgroup-horizontal .ui-radio { width:49.5%}
