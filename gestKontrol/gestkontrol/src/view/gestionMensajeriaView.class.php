@@ -9,26 +9,25 @@ class gestionMensajeriaView
 		$usuarios=controlUsuario::listUsuarios();
 		$userFrom=controlUsuario::getuserFullName($idUser);
 		?>
-		
-				<h3 style="text-align:center">Inicio » Nuevo Mensaje</h3>
+				<h3>Inicio » Nuevo Mensaje</h3>
+				<hr>
 				<fieldset class="ui-grid-a">
 					<a href="#" data-rel="dialog" data-role="button" data-theme="b"  data-inline="true" onclick="senderMensajes()" class="botonVistaMensaje">Enviar</a>
-					
-					<a href="#bandeja-entrada" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true">Volver</a>
+					<a href="#bandeja-entrada" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true">Volver</a>
 				</fieldset>
 				<form id="nuevoMensaje">
 					<div data-role="fieldcontain" style="display: none">
-						<label for="name"><strong class="red">*</strong>Id De :</label>
+						<label for="name"><strong class="red">*</strong> Id De:</label>
 						<input type="text" name="msgIdFrom" id="name" value="<?php echo $idUser;?>" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="name"><strong class="red">*</strong> De :</label>
+						<label for="name"><strong class="red">*</strong> De:</label>
 						<input type="text" name="msgFrom" id="name" value="<?php echo $userFrom;?>"  disabled="disabled"/>
 					</div>
 					<div data-role="fieldcontain">
 						<label for="msgTo"><strong class="red">*</strong> Para:</label>
-						<select name='msgTo' id='msgTo'  tabindex='-1'>
-							<option value='nadie'>Seleccione una persona</option>
+						<select name='msgTo' id='msgTo' tabindex='-1'>
+							<option value='nadie'>Seleccione un destinatario</option>
 					<?php 
 						foreach($usuarios as $result)
 						{
@@ -47,10 +46,8 @@ class gestionMensajeriaView
 						
 						<textarea name="msgContent" id="msgContent" style="width: 82.2%; height:200px;" placeholder="Escriba aqui el cuerpo del mensaje"></textarea>
 					</div>
-					
 				</form>
-				
-			
+
 		<script>
 			function senderMensajes()
 			{
@@ -161,13 +158,13 @@ class gestionMensajeriaView
 	public function bandejaEntrada($idUser)
 	{
 		?>
-			
-				<h3 style="text-align:center">Inicio » Bandeja de Entrada</h3>
+				<h3>Inicio » Mensajes Recibidos</h3>
+				<hr>
 				<fieldset class="ui-grid-a">
 					<a href="#redactar-mensaje" data-role="button" data-theme="b"  data-inline="true" onclick="limpiarMsj()" class="botonVistaMensaje">Redactar</a>
-					
-					<a href="#mensajes-enviados" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Enviados</a>
-					<a href="#mensajes-eliminados" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Eliminados</a>
+					<a href="#" data-role="button" data-theme="c" data-inline="true" class="ui-disabled">Recibidos</a>
+					<a href="#mensajes-enviados" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Enviados</a>
+					<a href="#mensajes-eliminados" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Eliminados</a>
 				</fieldset>
 				
 				<script>
@@ -183,15 +180,15 @@ class gestionMensajeriaView
 		<?php 
 		$mensajesRecibidos=controlMensajeria::getMensajes($idUser,"Recibidos");
 		?>
-				<table data-role="table" id="bandejaEntrada" class="ui-responsive">
+				<table id="bandejaEntrada" class="ui-table">
 					<thead>
 						<tr>
-						<th></th>
+						<!-- <th></th> -->
 						<th>De</th>
 						<th>Asunto</th>
 						<th>Fecha</th>
 						<th>Eliminar</th>
-						
+						<th>Estado</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -217,7 +214,7 @@ class gestionMensajeriaView
 					if($result->getestado()=="No Leido")
 					{
 					?>
-					<tr style="font-weight:bold" id="mensaje<?php echo $i;?>">
+					<tr class="msje-no-leido" id="mensaje<?php echo $i;?>">
 					<?php 
 					}
 					else{ ?>
@@ -226,24 +223,18 @@ class gestionMensajeriaView
 					<script>
 					var dataRecibidos<?php echo $i;?> = new Array("<?php echo $dataRecibidos;?>");
 					</script>
-							
-							<td><?php echo $i;?></td>
-							<td><?php echo $userFrom;?></td>
-							<td><?php echo $result->getasunto();?></td>
+							<!-- <td><?php echo $i;?></td> -->
+							<td><a href="#ventana-mensaje" onclick="verMensajeRecib(dataRecibidos<?php echo $i;?>,<?php echo $i;?>,<?php echo $result->getidMensaje();?>);"><?php echo $userFrom;?></a></td>
+							<td><a href="#ventana-mensaje" onclick="verMensajeRecib(dataRecibidos<?php echo $i;?>,<?php echo $i;?>,<?php echo $result->getidMensaje();?>);"><?php echo $result->getasunto();?></a></td>
 							<td><?php echo $result->getfecha();?></td>
-							
-							<td><a href="#"onclick="eliminarMensaje('<?php echo $i;?>','<?php echo $result->getidMensaje();?>')">Eliminar</a></td>
-							<td><a href="#" onclick="marcarLeido(<?php echo $i;?>, <?php echo $result->getidMensaje();?>)">Marcar como Leido</a></td>
-							<td><a href="#ventana-mensaje" onclick="verMensajeRecib(dataRecibidos<?php echo $i;?>,<?php echo $i;?>,<?php echo $result->getidMensaje();?>);">Ver mensaje</a></td>
-							
+							<td><a href="#"onclick="eliminarMensaje('<?php echo $i;?>','<?php echo $result->getidMensaje();?>')"><img src="http://localhost/gk/gestKontrol/gestkontrol/src/img/delete-correo.png"></a></td>
+							<td><a href="#" onclick="marcarLeido(<?php echo $i;?>, <?php echo $result->getidMensaje();?>)">Marcar como leído</a></td>
+							<!-- <td><a href="#ventana-mensaje" onclick="verMensajeRecib(dataRecibidos<?php echo $i;?>,<?php echo $i;?>,<?php echo $result->getidMensaje();?>);">Ver mensaje</a></td> -->
 					</tr>
-					
-							
+						
 					<?php
-					
 					$i++;
 				}
-				
 			}
 		}
 		else
@@ -261,10 +252,7 @@ class gestionMensajeriaView
 					switch(datos)
 					      {
 					      	case "1": 
-						      		
-					      		 
 						      	break;
-
 
 					      	case "0":
 						      	$('<div>').simpledialog2({
@@ -274,9 +262,8 @@ class gestionMensajeriaView
 					    		    blankContent : 
 					    			  "<p class='centrado'><strong>Error en cambio del mensaje, contactese con administracion</strong></p>"+
 					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
-					    			    		      // NOTE: the use of rel="close" causes this button to close the dialog.
-					    		      
-					    		  })
+					    			   // NOTE: the use of rel="close" causes this button to close the dialog.
+								})
 					      		break;
 							      	
 					      
@@ -304,7 +291,8 @@ class gestionMensajeriaView
 					    			    		      // NOTE: the use of rel="close" causes this button to close the dialog.
 					    		      
 					    		  })
-					      				break;
+				      				break;
+
 					       default:
 									
 								$('<div>').simpledialog2({
@@ -315,10 +303,8 @@ class gestionMensajeriaView
 						    			  "<p class='centrado'><strong>Lo sentimos </strong></p>"+
 						    			  "<h4 class='centrado'><strong>Dentro de unos minutos el administrador resolvera su problema</strong></h4>"+
 						    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
-						    		      
 						    		      // NOTE: the use of rel="close" causes this button to close the dialog.
-						    		      
-						    		  })
+					    		  })
 					    	}
 					
 					});
@@ -445,7 +431,8 @@ class gestionMensajeriaView
 		</script>
 					</tbody>
 				</table>
-				<script>
+
+		<script>
 		$(".botonVistaMensaje").bind('tap',function (){
 			 
 			 var atributo=$(this).attr("href");
@@ -459,19 +446,15 @@ class gestionMensajeriaView
 				});
 				 
 		 });
-
 		</script>
-			
-		<?php 
-		
+	<?php 
 	}
 	
 	public function viewMensaje()
 	{
 		?>
-		
-				<h3 style="text-align:center">Inicio » Bandeja de Entrada » Mensaje</h3>
-				<table data-role="table" id="viewMensaje" class="ui-responsive">
+				<h3>Inicio » Recibidos » Mensaje</h3>
+				<table id="viewMensaje">
 					<tr style="display:none">
 						<td >idMensaje:</td>
 						<td id="idMensaje"></td>
@@ -508,8 +491,7 @@ class gestionMensajeriaView
 				<br><br>
 				<fieldset class="ui-grid-a">
 					<a href="#redactar-mensaje" data-role="button" data-theme="b"  data-inline="true" onclick="responderMensaje()" >Responder</a>
-					
-					<a href="#bandeja-entrada" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Volver</a>
+					<a href="#bandeja-entrada" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Volver</a>
 				</fieldset>
 				<script>
 					function responderMensaje()
@@ -543,7 +525,6 @@ class gestionMensajeriaView
 				<script>
 			function botonVistaMensaje(atributo)
 			{
-				
 				 //var atributo=$(this).attr("href");
 				 //alert("boton apretado");
 				 atributo=atributo.split("#");
@@ -556,26 +537,21 @@ class gestionMensajeriaView
 					 //$('#msgTo').selectmenu('refresh', true);
 					 	
 					});
-				 
-					 
 			}
-			
-
 		</script>
-			
-			
+
 		<?php 
 	}
 	public function mensajesEnviados($idUser)
 	{
 		?>
-			
-					<h3 style="text-align:center">Inicio » Mensajes Enviados</h3>
+					<h3>Inicio » Mensajes Enviados</h3>
+					<hr>
 					<fieldset class="ui-grid-a">
 						<a href="#redactar-mensaje" data-role="button" data-theme="b"  data-inline="true" onclick="limpiarMsj()" class="botonVistaMensaje">Redactar</a>
-						
-						<a href="#bandeja-entrada" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Bandeja de Entrada</a>
-						<a href="#mensajes-eliminados" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Eliminados</a>
+						<a href="#bandeja-entrada" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Recibidos</a>
+						<a href="#" data-role="button" data-theme="c" data-inline="true" class="ui-disabled">Enviados</a>
+						<a href="#mensajes-eliminados" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Eliminados</a>
 					</fieldset>
 					
 					<script>
@@ -591,10 +567,10 @@ class gestionMensajeriaView
 			<?php 
 			$mensajesEnviados=controlMensajeria::getMensajes($idUser,"Enviados");
 			?>
-					<table data-role="table" id="bandejaEntrada" class="ui-responsive">
+					<table id="bandejaEntrada" class="ui-table">
 						<thead>
 							<tr>
-							<th></th>
+							<!-- <th></th> -->
 							<th>Para</th>
 							<th>Asunto</th>
 							<th>Fecha</th>
@@ -632,11 +608,11 @@ class gestionMensajeriaView
 						var dataEnviados<?php echo $i;?> = new Array("<?php echo $dataEnviados;?>");
 					</script>
 							
-							<td><?php echo $i;?></td>
-							<td>Para: <?php echo $userTo;?></td>
-							<td><?php echo $result->getasunto();?></td>
+							<!-- <td><?php echo $i;?></td> -->
+							<td><a href="#ventana-mensaje" onclick="verMensajeLeido(dataEnviados<?php echo $i;?>,<?php echo $i;?>);"><?php echo $userTo;?></a></td>
+							<td><a href="#ventana-mensaje" onclick="verMensajeLeido(dataEnviados<?php echo $i;?>,<?php echo $i;?>);"><?php echo $result->getasunto();?></a></td>
 							<td><?php echo $result->getfecha();?></td>
-							<td><a href="#ventana-mensaje" onclick="verMensajeLeido(dataEnviados<?php echo $i;?>,<?php echo $i;?>);">Ver mensaje</a></td>
+							<!-- <td><a href="#ventana-mensaje" onclick="verMensajeLeido(dataEnviados<?php echo $i;?>,<?php echo $i;?>);">Ver mensaje</a></td> -->
 							
 					</tr>
 					<?php
@@ -700,22 +676,20 @@ class gestionMensajeriaView
 					});
 					 
 			 });
-			
-
 		</script>
-				
-			<?php 
-			
+		
+		<?php 
 		}
 		public function mensajesEliminados($idUser)
 		{
 			?>
-			
-						<h3 style="text-align:center">Inicio » Mensajes Eliminados</h3>
+						<h3>Inicio » Mensajes Eliminados</h3>
+						<hr>
 						<fieldset class="ui-grid-a">
 							<a href="#redactar-mensaje" data-role="button" data-theme="b"  data-inline="true" onclick="limpiarMsj()" class="botonVistaMensaje">Redactar</a>
-							<a href="#bandeja-entrada" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Bandeja de Entrada</a>
-							<a href="#mensajes-enviados" data-direction="reverse" data-transition="slide" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Enviados</a>
+							<a href="#bandeja-entrada" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Recibidos</a>
+							<a href="#mensajes-enviados" data-direction="reverse" data-transition="fade" data-role="button" data-theme="c" rel="back" data-inline="true" class="botonVistaMensaje">Enviados</a>
+							<a href="#" data-role="button" data-theme="c" data-inline="true" class="ui-disabled">Eliminados</a>
 						</fieldset>
 						
 						<script>
@@ -737,15 +711,13 @@ class gestionMensajeriaView
 					
 					?>
 					
-					<table data-role="table" id="bandejaEntrada" class="ui-responsive">
+					<table id="bandejaEntrada" class="ui-table">
 							<thead>
 								<tr>
-								<th></th>
+								<!-- <th></th> -->
 								<th>De</th>
 								<th>Asunto</th>
 								<th>Fecha</th>
-								
-								
 								</tr>
 							</thead>
 							<tbody>
@@ -779,12 +751,12 @@ class gestionMensajeriaView
 							var dataEliminados<?php echo $j;?> = new Array('<?php echo $dataEliminados;?>');
 							</script>
 									
-									<td><?php echo $j;?></td>
-									<td><?php echo $userFrom;?></td>
-									<td><?php echo $result->getasunto();?></td>
+									<!-- <td><?php echo $j;?></td> -->
+									<td><a href="#ventana-mensaje" onclick="verMensajeElim(dataEliminados<?php echo $j;?>,<?php echo $j;?>);"><?php echo $userFrom;?></a></td>
+									<td><a href="#ventana-mensaje" onclick="verMensajeElim(dataEliminados<?php echo $j;?>,<?php echo $j;?>);"><?php echo $result->getasunto();?></a></td>
 									<td><?php echo $result->getfecha();?></td>
-									<td><a href="#" onclick="reestablecerMensaje(<?php echo $j;?>, <?php echo $result->getidMensaje();?>)">Reestablecer</a></td>
-									<td><a href="#ventana-mensaje" onclick="verMensajeElim(dataEliminados<?php echo $j;?>,<?php echo $j;?>);">Ver mensaje</a></td>
+									<td><a href="#" onclick="reestablecerMensaje(<?php echo $j;?>, <?php echo $result->getidMensaje();?>)">Enviar a recibidos</a></td>
+									<!-- <td><a href="#ventana-mensaje" onclick="verMensajeElim(dataEliminados<?php echo $j;?>,<?php echo $j;?>);">Ver mensaje</a></td> -->
 									
 							</tr>
 							
@@ -910,7 +882,8 @@ class gestionMensajeriaView
 				</script>
 							</tbody>
 						</table>
-							<script>
+
+		<script>
 		function botonVistaMensaje(atributo)
 		{
 			
@@ -945,8 +918,8 @@ class gestionMensajeriaView
 				<?php 
 				
 			}
-			public function vistasMensajeria()
-	{
+		public function vistasMensajeria()
+		{
 		?>
 		<div data-role="page" id="mensajes-eliminados">
 			<div data-role="content" id="content-mensajes-eliminados"></div>
@@ -969,8 +942,7 @@ class gestionMensajeriaView
 		</div>
 				
 		<?php 
-	}	
-		
-	
+		}	
+
 }
 ?>

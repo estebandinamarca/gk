@@ -18,9 +18,27 @@ foreach($mensajes as $contadorMensajes)
 	if($contadorMensajes->getestado()=="No Leido") $cont++;
 }
 ?>
-	<li class="menu_right principal menu-mensajes"><a id="cantCorreo"  href="#bandeja-entrada" onClick="location.replace('index.php#bandeja-entrada');" class="drop botonVistaMensaje"><?php if ($cont>0){?><span><?php echo $cont;?></span><?php }?></a><!-- Begin 4 columns Item -->
-             
+
+<!-- Efectos para tooltip y contador visitas pendientes -->
+  <script>
+    function blink(){
+        $('a.intermitente').delay(150).fadeTo(100,0.3).delay(150).fadeTo(100,1, blink);
+    }
+    $(document).ready(function() {
+        blink();
+    });
+  </script>
+
+  <script>
+      $(".cerrar-btn").click(function () {
+        $(".arrow_box").fadeOut("fast");
+      });    
+  </script>
+  <!-- / Fin Efectos Tooltip y contador visitas pendientes  -->
+
+	<li class="menu_right principal menu-mensajes"><a id="cantCorreo"  href="#bandeja-entrada" onClick="location.replace('index.php#bandeja-entrada');" class="drop botonVistaMensaje"><?php if ($cont>0){?><span><?php echo $cont;?></span><?php }?></a>          
     </li>
+
     <script>
     $(".botonVistaMensaje").bind('tap',function (){
 		 
@@ -49,10 +67,6 @@ foreach($mensajes as $contadorMensajes)
 		 
 	 });
     </script>
-
-    
-    <!-- End 4 columns Item -->
-
 
 <?php 
 if($privilegio>2)
@@ -86,19 +100,49 @@ if($privilegio>2)
 	}
 
 ?>
+ <!-- Tooltip de visitas pendientes -->
+    <div class="arrow_box">
+    <p class="cerrar-btn"><a href="#"><img src="src/img/close-x.png" width="16" height="16"></a></p>
+    <!-- <p>Es necesario que valide o elimines las visitas</p> -->
+    <p><button onClick="location.replace('index.php#lista-visitas-en-espera')">2 visitas pendientes</button></p>
+    </div>
+ <!-- / Fin Tooltip Visitas Pendientes -->
 
-		<li class="menu_right principal"><a href="#lista-visitas-en-espera" class="drop"><img src="src/img/time-menu.png" onClick="location.replace('index.php#lista-visitas-en-espera');"><?php if ($contVisEsp>0) {?><span class="rojo"><?php echo $contVisEsp;?></span><?php }?></a>
-			<div class="dropdown_1column align_right">
-	    		<div class="col_1">
-	    		<ul class="greybox">
-	    			<li><a href="#lista-visitas-en-espera" onClick="location.replace('index.php#lista-visitas-en-espera');">Visitas en espera</a></li>
-	    		</ul> 
-	    		</div> 
-	    	</div>
-		</li>
+          <li class="menu_right principal menu-responsivo-tool"><a href="#"><?php if ($totalVisitasSemana>0){?><span><?php echo $totalVisitasSemana;?></span><?php }?></a>
+                <div class="dropdown_1column align_right">
+                  <div class="col_1">
+                    <h2>Opciones:</h2>
+                  </div>
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#" rel="external" class="ui-link-inherit">Pendientes: <strong><?php echo $totalVisitasSemana;?></strong></a></li>
+                      </ul>   
+                  </div>                                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#" rel="external" class="ui-link-inherit">Visitas Hoy: <strong><?php echo $totalVisitasSemana;?></strong></a></li>
+                      </ul>   
+                  </div>
+                  
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#" rel="external" class="ui-link-inherit">Visitas Semana: <strong><?php echo $visitasSemanaManana;?></strong></a></li>
+                      </ul>   
+                  </div>
 
-          <li class="menu_right principal menu-semana"><a href="#"><?php if ($totalVisitasSemana>0){?><span><?php echo $totalVisitasSemana;?></span><?php }?></a><!-- Begin 3 columns Item -->
-              <div class="dropdown_1column align_right">
+                  <div class="col_1">
+                      <ul class="greybox">
+                          <li><a href="#" rel="external" class="ui-link-inherit">Mensajes: <strong><?php echo $visitasSemanaTarde;?></strong></a></li>
+                      </ul>   
+                  </div>
+               </div>
+            </li>
+
+
+		      <li class="menu_right principal menu-pendiente"><a class="intermitente" href="#lista-visitas-en-espera" onClick="location.replace('index.php#lista-visitas-en-espera');window.location.reload();"><?php if ($contVisEsp>0) {?><span class="rojo"><?php echo $contVisEsp;?></span><?php }?></a></li>
+
+          <li class="menu_right principal menu-semana"><a href="#"><?php if ($totalVisitasSemana>0){?><span><?php echo $totalVisitasSemana;?></span><?php }?></a>
+                <div class="dropdown_1column align_right">
                   <div class="col_1">
                     <h2>Semana</h2>
                   </div>                
@@ -121,6 +165,7 @@ if($privilegio>2)
                   </div>
                </div>
             </li>
+
             <li class="menu_right principal menu-dia"><a href="#"><?php if ($totalVisitasHoy>0){?><span><?php echo $totalVisitasHoy; ?></span><?php }?></a>
             
               <div class="dropdown_1column align_right">

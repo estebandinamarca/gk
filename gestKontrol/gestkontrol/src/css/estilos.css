@@ -168,6 +168,20 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
 #menu li.menu-semana {height: 50px; display: block; background: url(../img/menu-semana.png) bottom no-repeat;}
 #menu li.menu-semana:hover {background: url(../img/menu-semana-h.png) bottom no-repeat #FFF;}
 
+#menu li.menu-pendiente {height: 50px; display: block; background: url(../img/menu-pendiente.png) bottom no-repeat;}
+#menu li.menu-pendiente:hover {background: url(../img/menu-pendiente-h.png) bottom no-repeat #FFF;}
+
+#menu li.menu-responsivo-tool {height: 50px; background: url(../img/menu-responsive.png) bottom no-repeat; display: none;}
+#menu li.menu-responsivo-tool:hover {background: url(../img/menu-responsive-h.png) bottom no-repeat #FFF;}
+
+@media screen and (max-width:800px) { 
+  #menu li.menu-pendiente, #menu li.menu-semana, #menu li.menu-dia, #menu li.menu-mensajes {display: none!important;}
+}
+
+@media (max-width:800px) { 
+  #menu li.menu-responsivo-tool { display: block!important;}
+}
+
 #menu li a span {
   text-align: center!important;
   text-decoration: none;
@@ -396,4 +410,69 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
   left top,
   color-stop(0.22, rgb(74,125,175)),
   color-stop(0.61, rgb(110,171,212)));
+}
+
+/* Mensajes */
+.ui-table { border: 0; border-collapse: collapse; padding: 0; width: 100%;}
+.ui-table tr, .ui-table th, .ui-table tr a, .ui-table th a {text-align: left; font-weight: normal!important; color: #000!important; text-decoration: none!important; }
+.ui-table tr a, .ui-table th a {/*font-weight: bold!important;*/}
+.ui-table tr a:hover, .ui-table th a:hover {color: #404040!important; text-decoration: underline!important;}
+.ui-table th { padding: 15px 10px; border: 0 0 1px 0 solid #CCC; font-weight: bold!important; }
+.ui-table td { background: #FFF; padding: 12px 10px; border-bottom: 1px dotted #DDD;}
+.ui-table tr.msje-no-leido, .ui-table tr.msje-no-leido a {text-decoration: none!important; color: #2280c0!important; font-weight: bold!important;}
+.ui-table tr.msje-no-leido a:hover {text-decoration: none!important; color: #145d8f!important;}
+
+
+/* Visitas Pendientes Tool Tip */
+.arrow_box {position: absolute; background: #ffffff; border: 1px solid #dfdfdf; z-index: 999999; top: 65px; right: 165px; padding: 9px 20px 20px 20px;-webkit-border-radius: 10px; border-radius: 10px; -webkit-box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, .1); box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, .1);}
+.arrow_box p, .arrow_box p a { font-family: Arial, Helvetica, sans-serif; font-size: 15px!important; border: none!important; text-decoration: none!important;}
+.arrow_box p {text-align: right!important; padding: 0px!important; margin: 0px!important;}
+
+.arrow_box button { 
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 12px 19px;
+  /*text-shadow: 1px 1px 1px #949494; filter: dropshadow(color=#949494, offx=1, offy=1);*/
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #ccc;
+  border: solid 1px #ccc;
+  background-image: -webkit-linear-gradient(top, #fff, #f1f1f1);
+  background-image: -moz-linear-gradient(top, #fff, #f1f1f1);
+  background-image: -o-linear-gradient(top, #fff, #f1f1f1);
+  background-image: -ms-linear-gradient(top, #fff, #f1f1f1);
+  background-image: linear-gradient(to bottom, #fff, #f1f1f1);
+  font-family: Arial;
+  font-weight: bold;
+}
+
+/*.arrow_box button:active {background-color: #000!important;}*/
+
+.arrow_box:after, .arrow_box:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 20px;
+  left: 50%;
+  margin-left: -20px;
+}
+.arrow_box:before {
+  border-color: rgba(122, 122, 122, 0);
+  border-bottom-color: #dfdfdf;
+  border-width: 21px;
+  left: 50%;
+  margin-left: -21px;
 }
