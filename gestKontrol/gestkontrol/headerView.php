@@ -21,6 +21,7 @@ foreach($mensajes as $contadorMensajes)
 
 <!-- Efectos para tooltip y contador visitas pendientes -->
   <script>
+  // Contador
     function blink(){
         $('a.intermitente').delay(150).fadeTo(100,0.3).delay(150).fadeTo(100,1, blink);
     }
@@ -30,6 +31,7 @@ foreach($mensajes as $contadorMensajes)
   </script>
 
   <script>
+      // Tool tip - Boton "cerrar"
       $(".cerrar-btn").click(function () {
         $(".arrow_box").fadeOut("fast");
       });    
