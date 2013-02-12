@@ -1,7 +1,4 @@
 <?php
-
-
-
 ?>
 <script>
 $(document).ready(function(){
@@ -59,8 +56,7 @@ $(document).ready(function(){
 	});
 });
 </script>
-<div data-role="content">
-		<h3 style="text-align: center">
+		<h3>
 			<?php 
 				if(isset($cliente) && count($cliente)>0)
 				{
@@ -72,14 +68,10 @@ $(document).ready(function(){
 				}
 			?>
 		</h3>
-		<h3 style="text-align: center">Inicio » Nuevo Reporte</h3>
+		<h3>Inicio » Nuevo Reporte</h3>
 		<hr>
-		<!-- /navbar -->
-
-		<h4>Nueva visita</h4>
 		<!-- Datos personales Visita -->
 		<form action="get" id="reporteForm">
-			<div data-role="collapsible" data-content-theme="c" data-theme="b" data-collapsed="false">
 				<h3>Datos de Reporte</h3>
 				<div data-role="fieldcontain">
 					<label for="name"><strong class="red"></strong> Tipo de registro:</label>
@@ -192,7 +184,4 @@ $(document).ready(function(){
 					<a href="#" data-rel="dialog" data-role="button" data-theme="b"	data-inline="true" id="GenReport">Generar</a> 
 						<a href="#"	data-rel="dialog" data-role="button" data-theme="c" rel="back" onClick="location.replace('index.php');"	data-inline="true">Volver</a> <!-- window.location.reload('index.php'); -->
 				</fieldset>
-			</div>
 		</form>
-
-	</div>

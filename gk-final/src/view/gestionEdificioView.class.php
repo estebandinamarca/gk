@@ -7,14 +7,9 @@ class gestionEdificioView
 	public function getIngresoPisoOficina()
 	{
 		?>
-		
-		
 			<h3>Inicio » Nuevo Piso - Oficinas</h3>
 			<hr>
-			
-			
 			<form action="post" id="ingreso-piso-oficinas">
-			
 				<div data-role="fieldcontain">
 					<label for="file"> Utilice un archivo preconfigurado para facilitar el ingreso:</label>
 					<!--  input type="button" name="" id="name" value="Examinar"  data-mini="true" data-inline="true"/>
@@ -27,7 +22,6 @@ class gestionEdificioView
 					}
 					</script>
 					<a href="#" onclick="newPopup('uploaderOficina.php');" data-role="button" data-theme="c" rel="back" data-inline="true">Subir archivo</a>
-					
 				</div>
 				<hr>
 				<div data-role="fieldcontain">
