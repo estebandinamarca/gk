@@ -1,0 +1,66 @@
+#calhead {
+padding-left:1px;
+padding-right:0px;
+}
+
+.ui-grid-a {
+padding-bottom:10px;
+}
+
+.ui-block-a {
+float:left;
+width:50%;
+}
+
+.ui-block-c {
+float:right;
+width:50%; 
+height:100%;
+}
+
+.ui-block-c-c {
+width:auto;
+padding:0 10px 10px;
+float:right;
+}
+
+.fechas_cal {
+position: absolute;
+right: 10px;
+top: 50px;
+z-index: 999;
+}
+
+.semamas_f {
+margin-left:50px;
+}
+
+#txtdatetimeshow {
+margin-top:-5px;
+padding-right:15px;
+}
+
+.ui-grid-a {
+/*border-left: 1px solid #CCCCCC;
+border-right: 1px solid #CCCCCC;*/
+}
+
+#dvtec {
+height:550px!important;
+}
+
+#gridcontainer {
+height:600px!important;
+}
+
+#txtdatetimeshow {
+font-size: 15px; 
+color:#000; 
+padding-left:15px;
+}
+
+.calendario_margen {
+padding:25px;
+float:left;
+width:100%;
+}
