@@ -31,7 +31,7 @@ foreach($mensajes as $contadorMensajes)
   </script>
 
   <script>
-      // Tool tip - Boton "cerrar"
+      // Tooltip - Boton "cerrar"
       $(".cerrar-btn").click(function () {
         $(".arrow_box").fadeOut("fast");
       });    

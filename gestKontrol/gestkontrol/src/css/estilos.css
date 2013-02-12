@@ -16,30 +16,16 @@ div.margen-inferior { margin-bottom:30px!important}
 /* CENTRAR TEXTO */
 h4.centrado, p.centrado, h1.centrado {text-align:center!important}
 
-
 /* OTROS AJUSTES CSS */
 input.patente {margin:0 auto; max-width:200px!important}
 .ui-dialog-contain { margin-top: 7%!important}
 strong.red {color:#F00}
 
-/* radio buttons */
+/* Radio Buttons */
 .row-b .ui-btn { text-align: center;  width: 100%;}
-div.radio-responsivo .ui-controlgroup-horizontal .ui-radio { width:49.5%}
+div.radio-responsivo .ui-controlgroup-horizontal .ui-radio {width:49.5%}
 
-input[type="file"]
-{
-  border-style:none;	
-  background: #e3e3e3;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
-  box-shadow: inset 0 0 1px 1px #f6f6f6;
-  color: #000;
-  font: bold 12px/1 Arial, Helvetica, sans-serif;
-  padding: 8px 0 9px;
-  text-align: center;
-  text-shadow: 0 1px 0 #fff;
-  width: 150px; }
+input[type="file"] {border-style:none; background: #e3e3e3; border: 1px solid #bbb; border-radius: 3px; -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6; box-shadow: inset 0 0 1px 1px #f6f6f6; color: #000; font: bold 12px/1 Arial, Helvetica, sans-serif; padding: 8px 0 9px; text-align: center; text-shadow: 0 1px 0 #fff; width: 150px;}
 
 /*input[type="file"]
 {
@@ -77,15 +63,7 @@ div.right { float: right; margin: 30px 0 0 0; }
 .ui-grid-a-padding {padding: 0 5px!important;}
 
 /* DASHBOARD */
-/*#header-pulento
-{   top      : 0;
-    left     : 0;
-    height   : 50px;
-    z-index  : 999999!important;
-}*/
-div.gk-header {z-index  : 999999!important;
-  position : fixed;
-  height: 50px!important; width: 100%; margin: 0px auto; display: block; padding: 0 -15px; clear: both;
+div.gk-header {z-index:999999!important; position:fixed; height: 50px!important; width: 100%; margin: 0px auto; display: block; padding: 0 -15px; clear: both;
 background: #0C0C0C!important;  
 background-image: linear-gradient(bottom, #0C0C0C 0%, #3D3D3D 86%);
 background-image: -o-linear-gradient(bottom, #0C0C0C 0%, #3D3D3D 86%);
@@ -103,9 +81,7 @@ div.gk-menu {float: right; height: 50px; width: 60%;}
 [data-role="page"] { margin-top : 50px;}
 
 #menu {list-style:none; width:100%; margin:0px 15px 0 0; height:50px; padding:0px; float: right; background: none;}
-
 #menu li {float:left; display:block; text-align:center; position:relative; padding:0px; margin:0px; border:none; z-index: 999999;}
-
 #menu li:hover {border: 0px solid #777777; padding: 0px; background: #FFF;
   /*background: -moz-linear-gradient(top, #F4F4F4, #EEEEEE);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F4F4F4), to(#EEEEEE));*/
