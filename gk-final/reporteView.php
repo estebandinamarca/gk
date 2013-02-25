@@ -49,9 +49,9 @@ $(document).ready(function(){
 		var group = document.getElementById("group").value;
 
 		var url = 'reporteGen.php?registro='+nombre+'&piso='+piso+'&empresa='+empresa+'&horario='+horario+'&horarioi='+horarioi+'&horariot='+horariot+'&periodo='+periodo+'&fechai='+fechai+'&fechat='+fechat+'&fesp='+fesp+'&result='+result+'&group='+group;
-		
-		$("#reporte").load(url,function(){
-			 $('#reporte').trigger('create');
+		//alert(url);
+		$("#reporte_c").load(url,function(){
+			 $('#reporte_c').trigger('create');
 	 	});
 	});
 });
@@ -70,11 +70,14 @@ $(document).ready(function(){
 		</h3>
 		<h3>Inicio » Nuevo Reporte</h3>
 		<hr>
+		<h4>Configure los datos necesarios para generar un nuevo reporte.</h4>
 		<!-- Datos personales Visita -->
+		<div data-role="collapsible" data-content-theme="c" data-theme="b" data-collapsed="false">
+		<h3>Datos del Reporte</h3>	
 		<form action="get" id="reporteForm">
-				<h3>Datos de Reporte</h3>
+				<!-- <h3>Datos de Reporte</h3> -->
 				<div data-role="fieldcontain">
-					<label for="name"><strong class="red"></strong> Tipo de registro:</label>
+					<label for="name"><strong class="red"></strong>Tipo de registro:</label>
 						<select name="nombre" id="registro">
 							<option value="Ingreso">Entradas</option>
 							<option value="Salida">Salidas</option>
@@ -85,7 +88,7 @@ $(document).ready(function(){
 						</select>
 				</div>
 				<div data-role="fieldcontain">
-					<label for="name"><strong class="red"></strong> Piso:</label>
+					<label for="name"><strong class="red"></strong>Piso:</label>
 
 					<select name="piso" id="piso">
 						<option value="todos">Todos</option>
@@ -100,7 +103,7 @@ $(document).ready(function(){
 						
 				</div>
 				<div data-role="fieldcontain">
-					<label for="name"><strong class="red"></strong> Cliente / Empresa:</label>
+					<label for="name"><strong class="red"></strong>Cliente / Empresa:</label>
 					<select name="empresa" id="empresa">
 					<option value="todos">Todos</option>
 					<?php 
@@ -185,3 +188,4 @@ $(document).ready(function(){
 						<a href="#"	data-rel="dialog" data-role="button" data-theme="c" rel="back" onClick="location.replace('index.php');"	data-inline="true">Volver</a> <!-- window.location.reload('index.php'); -->
 				</fieldset>
 		</form>
+		</div>

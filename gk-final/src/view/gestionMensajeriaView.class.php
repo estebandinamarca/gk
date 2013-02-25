@@ -60,7 +60,7 @@ class gestionMensajeriaView
 						      		
 					      		 $('<div>').simpledialog2({
 						    		    mode: 'blank',
-						    		    headerText: 'Información',
+						    		    headerText: 'Hecho!',
 						    		    headerClose: true,
 						    		    blankContent : 
 						    			  "<p class='centrado'><strong>Mensaje enviado</strong></p>"+
@@ -76,11 +76,11 @@ class gestionMensajeriaView
 					      	case "0":
 						      	$('<div>').simpledialog2({
 					    		    mode: 'blank',
-					    		    headerText: 'Problema',
+					    		    headerText: 'Aviso',
 					    		    headerClose: true,
 					    		    blankContent : 
-					    			  "<p class='centrado'><strong>Error en envio del mensaje, contactese con administracion</strong></p>"+
-					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
+					    			  "<p class='centrado'><strong>Error en envío del mensaje, contáctese con administración</strong></p>"+
+					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check' data-theme='c'>Aceptar</a>"
 					    			    		      // NOTE: the use of rel="close" causes this button to close the dialog.
 					    		      
 					    		  })
@@ -90,11 +90,11 @@ class gestionMensajeriaView
 					      	case "-1":
 						      	$('<div>').simpledialog2({
 					    		    mode: 'blank',
-					    		    headerText: 'Problema',
+					    		    headerText: 'Aviso',
 					    		    headerClose: true,
 					    		    blankContent : 
-					    			  "<p class='centrado'><strong>Error en SQL, contactese con administracion</strong></p>"+
-					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
+					    			  "<p class='centrado'><strong>Error en SQL, contáctese con administración</strong></p>"+
+					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-theme='c'>Aceptar</a>"
 					    			    		      // NOTE: the use of rel="close" causes this button to close the dialog.
 					    		      
 					    		  })
@@ -103,11 +103,11 @@ class gestionMensajeriaView
 					      	case "-2":
 						      	$('<div>').simpledialog2({
 					    		    mode: 'blank',
-					    		    headerText: 'Problema',
+					    		    headerText: 'Aviso',
 					    		    headerClose: true,
 					    		    blankContent : 
-					    			  "<p class='centrado'><strong>No se seleccionó el destinatario</strong></p>"+
-					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
+					    			  "<p class='centrado'><strong>Debe seleccionar un destinatario</strong></p>"+
+					    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-theme='c'>Volver</a>"
 					    			    		      // NOTE: the use of rel="close" causes this button to close the dialog.
 					    		      
 					    		  })
@@ -120,7 +120,7 @@ class gestionMensajeriaView
 						    		    headerClose: true,
 						    		    blankContent : 
 						    			  "<p class='centrado'><strong>Lo sentimos </strong></p>"+
-						    			  "<h4 class='centrado'><strong>Dentro de unos minutos el administrador resolvera su problema</strong></h4>"+
+						    			  "<h4 class='centrado'><strong>Dentro de unos minutos el administrador resolverá su problema</strong></h4>"+
 						    			  "<a data-role='button' href='#' data-transition='pop' rel='close' data-icon='check'>Aceptar</a>"
 						    		      
 						    		      // NOTE: the use of rel="close" causes this button to close the dialog.
